@@ -3,7 +3,7 @@ import { setOptions } from '@storybook/addon-options';
 
 setOptions({
   name: 'EBTH',
-  url: '#',
+  url: '/',
 });
 
 const req = require.context('../src', true, /\.stories\.js$/);
