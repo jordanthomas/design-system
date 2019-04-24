@@ -6,7 +6,7 @@ Basic usage:
 
 ```javascript
 import * as React from 'react';
-import Badge from '~/public/shared/components/Badge';
+import { Badge } from '~/public/shared/components/Badge';
 
 export default () => {
     return (

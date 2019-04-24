@@ -1,0 +1,44 @@
+.badge {
+  // @include as-body('small', 'regular');
+  display: inline-block;
+  border-radius: 13px;
+  min-width: 26px;
+  height: 26px;
+  padding: 0 0.5em;
+  // background-color: $gray-200;
+  background-color: #cfcfcf;
+  line-height: 26px;
+  text-align: center;
+
+  &--mini {
+    overflow: hidden;
+    border-radius: 9px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 0.5em;
+    font-size: 0.75rem;
+    line-height: 18px;
+  }
+
+  &--wide {
+    padding: 0 1.5em;
+  }
+
+  &--success {
+    color: #fff;
+    // background-color: $green-300;
+    background-color: #718d50;
+  }
+
+  &--danger {
+    color: #fff;
+    // background-color: $red-300;
+    background-color: #e05d48;
+  }
+
+  &--dark {
+    color: #fff;
+    // background-color: $gray-400;
+    background-color: #747374;
+  }
+}

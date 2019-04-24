@@ -4,7 +4,7 @@ import { storiesOf, setAddon } from '@storybook/react';
 import JSXAddon from 'storybook-addon-jsx';
 import { withReadme } from 'storybook-readme';
 
-import Badge from './Badge';
+import { Badge } from './Badge';
 import BadgeREADME from './README.md';
 
 setAddon(JSXAddon);
