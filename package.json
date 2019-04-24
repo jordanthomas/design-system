@@ -13,9 +13,9 @@
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
-    "@storybook/addon-links": "^5.0.6",
-    "@storybook/addon-options": "^5.0.6",
-    "@storybook/react": "^5.0.6",
+    "@storybook/addon-links": "^5.0.10",
+    "@storybook/addon-options": "^5.0.10",
+    "@storybook/react": "^5.0.10",
     "@storybook/theming": "^5.0.10",
     "babel-loader": "^8.0.5",
     "node-sass": "^4.11.0",
