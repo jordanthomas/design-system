@@ -1,9 +1,10 @@
-import { configure } from '@storybook/react';
-import { setOptions } from '@storybook/addon-options';
+import { addParameters, configure } from '@storybook/react';
+import ebthTheme from './ebthTheme';
 
-setOptions({
-  name: 'EBTH',
-  url: '/',
+addParameters({
+  options: {
+    theme: ebthTheme,
+  },
 });
 
 const req = require.context('../src', true, /\.stories\.js$/);
