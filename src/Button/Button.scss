@@ -1,0 +1,255 @@
+@import '../core/base';
+
+@mixin btn-focus-shadow($color) {
+  &:focus {
+
+    &:not([disabled]) {
+      box-shadow: 0 0 0 3px rgba($color, 0.4);
+    }
+  }
+}
+
+@mixin btn-primary($color, $color-hover) {
+  border-color: $color;
+  color: #fff;
+  background: $color;
+
+  &:hover,
+  &:focus {
+
+    &:not([disabled]) {
+      border-color: $color-hover;
+      color: #fff;
+      background: $color-hover;
+    }
+  }
+
+  @include btn-focus-shadow($color);
+}
+
+@mixin btn-secondary($color) {
+  border-color: $color;
+  color: $color;
+
+  &:hover,
+  &:focus {
+
+    &:not([disabled]) {
+      color: #fff;
+      background: $color;
+    }
+  }
+
+  @include btn-focus-shadow($color);
+}
+
+.btn {
+  $b: &;
+
+  @include as-body('regular', 'bold');
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: middle;
+  border: $btn-border-width solid transparent;
+  border-radius: $btn-border-radius;
+  padding: 0.55em 1em;
+  user-select: none;
+  color: $text-color;
+  background: transparent;
+  text-align: center;
+  text-decoration: none;
+  transition-timing-function: $btn-hover-timing-function;
+  transition-duration: $btn-hover-timing;
+  transition-property: color, background, border-color;
+  appearance: none;
+
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  &:hover,
+  &:focus {
+
+    &:not([disabled]) {
+      z-index: 1;// ensures box-shadow doesn't get overlapped
+      color: $text-color;
+    }
+  }
+
+  &--link {
+    border: 0;
+    padding: 0;
+    color: $link-color;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: $text-color;
+      background-color: transparent;
+    }
+  }
+
+  &--badged {
+    position: relative;
+    overflow: visible;
+  }
+
+  &--block {
+    display: block;
+    width: 100%;
+  }
+
+  &--icon-only {
+    padding: 0.55em;
+  }
+
+  &--icon-only-circle {
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    padding: 0;
+    line-height: 2em;
+    text-align: center;
+  }
+
+  &--extra-sm {
+    @include as-body('micro', 'bold');
+  }
+
+  &--sm {
+    @include as-body('small', 'bold');
+  }
+
+  &--lg {
+    @include as-body('large', 'bold');
+  }
+
+  &--xl {
+    @include as-header('h5');
+  }
+
+  &--primary,
+  &--following {
+    @include btn-primary($teal-300, $teal-500);
+  }
+
+  &--primary-important {
+    @include btn-primary($green-300, $green-500);
+  }
+
+  &--primary-contrast {
+    @include btn-primary($gold-300, $yellow-500);
+  }
+
+  &--primary-danger {
+    @include btn-primary($red-300, $red-500);
+  }
+
+  &--primary-facebook {
+    @include btn-primary($social-facebook, darken($social-facebook, 10%));
+  }
+
+  &--secondary,
+  &--follow {
+    @include btn-secondary($teal-300);
+  }
+
+  &--secondary-important {
+    @include btn-secondary($green-300);
+  }
+
+  &--secondary-danger {
+    @include btn-secondary($red-300);
+  }
+
+  // "light" buttons are only used in the header so their styles slightly detour
+  // from the standard patterns. Further overrides in header.scss
+  &--primary-light {
+    @include btn-primary($gold-100, $gold-300);
+  }
+
+  &--secondary-light {
+    @include btn-secondary($gold-100);
+  }
+
+  &--primary-light,
+  &--secondary-light {
+    color: $gray-400;
+
+    &:hover,
+    &:focus {
+
+      &:not([disabled]) {
+        color: $gray-500;
+      }
+    }
+  }
+
+  &--following {
+    // Removes padding because it requires setting an explicit width on the
+    // button which will prevent jumping width when changing the button's text
+    // on hover
+    padding-right: 0;
+    padding-left: 0;
+
+    // Prevents the hover state until user's mouse has left the button on
+    // initial click and "follow"
+    &:not(.cancel-hover-style):hover {
+      @include btn-focus-shadow($red-500);
+      border-color: $red-500;
+      color: #fff;
+      background-color: $red-500;
+    }
+  }
+
+  // "Ghost" buttons when combined w/ secondary modifier
+  &--borderless {
+    border-color: transparent;
+
+    &:hover,
+    &:focus {
+
+      &:not([disabled]) {
+        border-color: transparent;
+      }
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    vertical-align: middle;
+    $dims: 1.3em;
+    $fix: 0.2em;// arbitrary visual adjustment (shifts icon upward)
+    $offset: 0 - ($dims / 2);
+    margin: ($offset - $fix) 0.3em $offset 0;
+    width: $dims;
+    height: $dims;
+    fill: currentColor;
+    transform: scale(1);
+
+    &--right {
+      margin: ($offset - $fix) 0 $offset 0.3em;
+    }
+
+    #{$b}--icon-only &,
+    #{$b}--icon-only-circle & {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  &__badge {
+    z-index: 1;
+    position: absolute;
+    top: -0.85em;
+    right: -0.25em;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    will-change: opacity, transform;
+
+    &[data-count='0'] {
+      opacity: 0;
+      transform: scale(0);
+    }
+  }
+}
