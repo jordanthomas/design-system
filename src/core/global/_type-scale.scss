@@ -1,0 +1,187 @@
+// --------------------------------------------------------
+// Set up a font baseline, set REM
+// --------------------------------------------------------
+
+html,
+body {
+  @include aktiv-grotesk('regular');
+  color: $text-color;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+}
+
+// --------------------------------------------------------
+// base typography elements
+// --------------------------------------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  @include as-header('h1');
+}
+
+h2 {
+  @include as-header('h2');
+}
+
+h3 {
+  @include as-header('h3');
+}
+
+h4 {
+  @include as-header('h4');
+}
+
+h5 {
+  @include as-header('h5');
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+address {
+  font-style: normal;
+  line-height: inherit;
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+dd {
+  margin-bottom: 0.5rem;
+  margin-left: 0; // Undo browser default
+}
+
+blockquote {
+  margin: 0 0 1rem;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+figure {
+  margin: 0 0 1rem;
+}
+
+button,
+html [type='button'],
+[type='reset'],
+[type='submit'],
+[role='button'] {
+  cursor: pointer;
+}
+
+th {
+  text-align: left;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+
+  & abbr[title] {
+    border-bottom: 0;
+    text-decoration: none;
+  }
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  border-radius: 0;
+  line-height: inherit;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+input {
+  &.full {
+    margin-top: 1rem;
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+textarea {
+  resize: vertical;
+
+  &.full {
+    margin-bottom: 1rem;
+    border-color: #ccc;
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+fieldset {
+  margin: 0;
+  border: 0;
+  min-width: 0;
+  padding: 0;
+}
+
+legend {
+  display: block;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  padding: 0;
+  font-size: 1.5rem;
+  line-height: inherit;
+}
+
+input[type='search'] {
+  box-sizing: inherit;
+  -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
+}
+
+a {
+  color: $link-color;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+  }
+}
+
+small {
+  @include as-body('micro', 'regular');
+}
+
+
+strong {
+  font-weight: 700;
+}
+
+// Reset during rebrand should be removed after type tansition is finished - JK
+span {
+  text-transform: initial;
+}

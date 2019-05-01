@@ -1,5 +1,9 @@
 @import 'base';
 
+@import 'global/normalize';
+@import 'global/global';
+@import 'global/type-scale';
+
 @import 'global/utilities/color';
 @import 'global/utilities/spacing';
 @import 'global/utilities/utility';

@@ -1,0 +1,57 @@
+// sass-lint:disable no-universal-selectors
+html {
+  overflow-y: scroll;
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+:focus {
+  outline: none;
+}
+
+[tabindex='-1']:focus {
+  outline: none !important; // sass-lint:disable-line no-important
+}
+
+img {
+  display: block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+[hidden] {
+  display: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+// Classes add to <html> and <body> to kill the scroll when modals are open
+.html-modal-open {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.body-modal-open {
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+}
