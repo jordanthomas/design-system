@@ -1,0 +1,26 @@
+// z-index
+// function accepts multiple arguments: $position: above, below; $layer mapped in $z-indices variable
+// usage: z-index: z-index(above/below modal/header/dropdown); or z-index: z-index(modal/header/dropdown);
+
+@function z-index($layer) {
+  $nudge: 10;
+
+  @if length($layer) > 1 {
+    $position: nth($layer, 1);
+    $value: nth($layer, 2);
+    $value: map-get($z-indices, $value);
+
+    // If position is above add
+    @if $position == 'above' {
+      $value: $value + $nudge;
+      @return $value;
+    }
+    // If position is below subtract
+    @if $position == 'below' {
+      $value: $value - $nudge;
+      @return $value;
+    }
+  } @else {
+    @return map-get($z-indices, $layer);
+  }
+}

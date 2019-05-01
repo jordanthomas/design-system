@@ -1,6 +1,8 @@
 import { addParameters, configure } from '@storybook/react';
 import ebthTheme from './ebthTheme';
 
+import '../src/core/global.scss';
+
 addParameters({
   options: {
     theme: ebthTheme,

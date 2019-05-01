@@ -1,0 +1,300 @@
+// The base font used in the app. The "body" font. When in doubt use me.
+$default-font: aktiv-grotesk, sans-serif !global;
+
+// The supporting font used in the app. Used for additional headers, callouts,
+// contrast, etc. Use me sparingly
+$secondary-font: bebas-neue, sans-serif !global;
+
+// The font stack of the app
+$as-font-stack: (
+  // A font family of the stack
+  default: (
+    // A specific font treatment for the family
+    initial: (
+      font-family: $default-font,
+      line-height: 1.4,
+      letter-spacing: -0.2px,
+      font-kerning: normal,
+      text-transform: initial,
+    ),
+    regular: (
+      font-weight: 400,
+      font-style: normal,
+      text-transform: initial,
+    ),
+    bold: (
+      font-style: normal,
+      font-weight: 700,
+      text-transform: initial,
+    ),
+    italic: (
+      font-style: italic,
+      font-weight: 400,
+      text-transform: initial,
+    ),
+    bolid-italic: (
+      font-style: italic,
+      font-weight: 700,
+      text-transform: initial,
+    ),
+  ),
+  secondary: (
+    initial: (
+      font-family: $secondary-font,
+      line-height: 1.1,
+      text-transform: uppercase,
+      font-weight: 400,
+      font-style: normal,
+    ),
+  ),
+);
+
+// Base font family treatment map
+@mixin font-style($font-stack-name, $style) {
+  // Pull in the font stack
+  @if not map-has-key($as-font-stack, $font-stack-name) {
+    @error 'Missing font family `#{$font-stack-name}` in font stack';
+  }
+  $font-stack-family: map-get($as-font-stack, $font-stack-name);
+
+  // Pull in the font treatment for the family
+  $initial-styles: map-get($font-stack-family, 'initial');
+
+  // Pull in additional treatment for the family
+  @if not map-has-key($font-stack-family, $style) {
+    @error 'Missing treatment `#{$style}` in font family `#{$font-stack-name}`';
+  }
+  $variant-styles: map-get($font-stack-family, $style);
+
+  // Merge the default & variant into one object
+  $styles: map-merge($initial-styles, $variant-styles);
+
+  // Write the merged object into useable styles
+  @each $css-rule, $value in $styles {
+    #{$css-rule}: #{$value};
+  }
+}
+
+// Aktiv Grotesk as $default-font for code-wide use. USE this to set font
+// styles elsewhere.
+@mixin aktiv-grotesk($style) {
+  @include font-style('default', $style);
+}
+
+// Bebas Neue as $secondary-font for code-wide use. USE this to set font
+// styles elsewhere.
+@mixin bebas-neue($style) {
+  @include font-style('secondary', $style);
+}
+
+// Type elements: Headings, body copy etc.
+$as-element: (
+  // A specific type element
+  body: (
+    // A specific style for the element
+    regular: (
+      font-stack-family: 'default',
+      style: (
+        font-size: 1rem,
+      ),
+    ),
+    micro: (
+      font-stack-family: 'default',
+      style: (
+        font-size: 0.75rem,
+      ),
+    ),
+    small: (
+      font-stack-family: 'default',
+      style: (
+        font-size: 0.875rem,
+      ),
+    ),
+    large: (
+      font-stack-family: 'default',
+      style: (
+        font-size: 1.125rem,
+      ),
+    ),
+  ),
+  // A specific type element
+  headers: (
+    // Purpose/intention of element usage
+    default: (
+      // A specific style for the element
+      h1: (
+        font-stack-family: 'secondary',
+        treatment: 'initial',
+        style: (
+          font-size: 2.625rem,
+        ),
+      ),
+      h2: (
+        font-stack-family: 'default',
+        treatment: 'bold',
+        style: (
+          font-size: 2rem,
+        ),
+      ),
+      h3: (
+        font-stack-family: 'default',
+        treatment: 'bold',
+        style: (
+          font-size: 1.75rem,
+        ),
+      ),
+      h4: (
+        font-stack-family: 'secondary',
+        treatment: 'initial',
+        style: (
+          font-size: 2rem,
+        ),
+      ),
+      h5: (
+        font-stack-family: 'default',
+        treatment: 'bold',
+        style: (
+          font-size: 1.375rem,
+        ),
+      ),
+      h6: (
+        font-stack-family: 'default',
+        treatment: 'bold',
+        style: (
+          font-size: 1.125rem,
+        ),
+      ),
+    ),
+    functional: (
+      h1: (
+        font-stack-family: 'default',
+        treatment: 'bold',
+        style: (
+          font-size: 2rem,
+        ),
+      ),
+      h2: (
+        font-stack-family: 'secondary',
+        treatment: 'initial',
+        style: (
+          font-size: 2.375rem,
+        ),
+      ),
+      h3: (
+        font-stack-family: 'default',
+        treatment: 'regular',
+        style: (
+          font-size: 1.625rem,
+
+        ),
+      ),
+      h4: (
+        font-stack-family: 'default',
+        treatment: 'bold',
+        style: (
+          font-size: 1.25rem,
+        ),
+      ),
+      h5: (
+        font-stack-family: 'default',
+        treatment: 'bold',
+        style: (
+          font-size: 1.125rem,
+        ),
+      ),
+      h6: (
+        font-stack-family: 'default',
+        treatment: 'bold',
+        style: (
+          font-size: 1rem,
+        ),
+      ),
+    ),
+  ),
+);
+
+// Body Copy
+@mixin as-body(
+  $style-name: 'regular', // Body > element
+  $treatment-name: 'regular' // font family > font treatment
+) {
+  $type-element: map-get($as-element, 'body');
+
+  @if not map-has-key($type-element, $style-name) {
+    @error 'Missing style `#{$style-name}` in type element body';
+  }
+  $type-style: map-get($type-element, $style-name);
+
+  @if not map-has-key($type-style, 'font-stack-family') {
+    @error 'Missing `font-stack-family` in type element, `body`.`#{$style-name}`';
+  }
+
+  @include font-style(
+    map-get($type-style, 'font-stack-family'),
+    $treatment-name
+  );
+
+  $styles: map-get($type-style, 'style');
+
+  @each $css-rule, $value in $styles {
+    #{$css-rule}: #{$value};
+  }
+}
+
+
+// Headers
+@mixin as-header(
+  $element-name, // headers > element usage > element
+  $purpose: 'default' // headers > element usage
+) {
+  $type-element: map-get($as-element, 'headers');
+
+  $header-purpose: map-get($type-element, $purpose);
+
+  @if not map-has-key($type-element, $purpose) {
+    @error 'Missing purpose `#{$style-name}` in type element header';
+  }
+  $type-style: map-get($header-purpose, $element-name);
+
+  @if not map-has-key($header-purpose, $element-name) {
+    @error 'Missing style `#{element-name}` in type element headers';
+  }
+
+  @if not map-has-key($type-style, 'font-stack-family') {
+    @error 'Missing `font-stack-family` in type element header, `#{$element-name}`.`#{$purpose}`';
+  }
+
+  @if not map-has-key($type-style, 'treatment') {
+    @error 'Missing `treatment` in type element header, `#{$element-name}`.`#{$purpose}`';
+  }
+
+  @include font-style(
+    map-get($type-style, 'font-stack-family'),
+    map-get($type-style, 'treatment')
+  );
+
+
+  $styles: map-get($type-style, 'style');
+
+  @each $css-rule, $value in $styles {
+    #{$css-rule}: #{$value};
+  }
+}
+
+// --------------------------------------------------------
+// OLD BRAND
+// --------------------------------------------------------
+
+@mixin list-reset {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+@mixin inline-list {
+  @include list-reset;
+  display: inline-block;
+
+  & li {
+    display: inline-block;
+  }
+}

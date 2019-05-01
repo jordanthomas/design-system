@@ -1,0 +1,47 @@
+// --------------------------------------------------------
+// margin/padding utilities
+// Generates spacing classes that look like this:
+// .u-[m|p][|x|y|t|r|b|l][0|1|2|3|4|5|6|7|8]
+//
+// m = margin
+// p = padding
+// x = left and right
+// y = top and bottom
+// t, r, b, l = top left bottom right
+// number = 0-8
+// --------------------------------------------------------
+$increment-size: 0.5rem;
+$increments: 8;
+
+@function calculate-value($increment) {
+  // Returns a unitless zero value ('0' instead of '0rem')
+  @return if($increment == 0, 0, $increment * $increment-size);
+}
+
+@each $type in margin, padding {
+  $type-short: str-slice($type, 1, 1);
+
+  @for $i from 0 through $increments {
+    .u-#{$type-short}#{$i} {
+      #{$type}: calculate-value($i);
+    }
+
+    .u-#{$type-short}y#{$i} {
+      #{$type}-top: calculate-value($i);
+      #{$type}-bottom: calculate-value($i);
+    }
+
+    .u-#{$type-short}x#{$i} {
+      #{$type}-left: calculate-value($i);
+      #{$type}-right: calculate-value($i);
+    }
+
+    @each $side in top, right, bottom, left {
+      $side-short: str-slice($side, 1, 1);
+
+      .u-#{$type-short}#{$side-short}#{$i} {
+        #{$type}-#{$side}: calculate-value($i);
+      }
+    }
+  }
+}

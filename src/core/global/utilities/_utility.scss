@@ -1,0 +1,231 @@
+// sass-lint:disable no-important
+
+.clearfix {
+  @include clearfix;
+}
+
+.sr-only {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  margin: -1px;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+}
+
+// --------------------------------------------------------
+// display utiltites
+// --------------------------------------------------------
+
+// .u-hide-from-webviews {
+//  NOTE: This class is used to visually supress elements from webviews of
+//  public pages that get rendered as web views in the iOS app
+//  https://github.com/ebth/ebth-app/blob/master/EBTH/js/hideNav.js
+// }
+
+.hidden {
+  display: none !important;
+}
+
+.u-hide {
+  display: none;
+
+  &--md-down {
+
+    @media (max-width: ($breakpoint-md - 0.0625rem)) {
+      display: none !important;
+    }
+  }
+
+  &--lg-down {
+
+    @media (max-width: ($breakpoint-lg - 0.0625rem)) {
+      display: none !important;
+    }
+  }
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+
+.u-i {
+  display: inline !important;
+}
+
+.u-ib {
+  display: inline-block !important;
+}
+
+.u-flex {
+  display: flex !important;
+}
+
+.u-flex-apart {
+  display: block;
+
+  @media (min-width: $breakpoint-md) {
+    display: flex;
+    justify-content: space-between;
+    align-items: normal;
+  }
+}
+
+@each $key, $size in $breakpoints {
+
+  .hidden-#{$key}-down {
+
+    @media (max-width: ($size - 0.0625rem)) {
+      display: none !important;
+    }
+  }
+
+  .hidden-#{$key}-up {
+
+    @media (min-width: $size) {
+      display: none !important;
+    }
+  }
+}
+
+// --------------------------------------------------------
+// FlexBox Align Property
+// Generates flexbox alignment classes that look like this:
+// .u-align-items-[|t|c|b|]
+// t = top
+// c = center
+// b = bottom
+// --------------------------------------------------------
+
+@each $align-type in top, center, bottom {
+  $align-type-short: str-slice($align-type, 1, 1);
+
+  .u-align-items-#{$align-type-short} {
+    align-items: $align-type;
+  }
+}
+
+// --------------------------------------------------------
+// Flex Order
+// Alternate Flex Order properties for side by side elements
+//.u-order-[1|2]
+@for $i from 1 through 4 {
+
+  .u-order-#{$i} {
+    order: $i;
+  }
+}
+
+// --------------------------------------------------------
+// Table utilties
+// --------------------------------------------------------
+.u-table-header {
+
+  &-40 {
+    width: 40%;
+  }
+
+  &-50 {
+    width: 50%;
+  }
+}
+
+// --------------------------------------------------------
+// text utilties
+// --------------------------------------------------------
+.text-muted {
+  color: $gray-300;
+}
+
+.u-text-warn {
+  color: $red-300;
+  font-size: 0.8rem;
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-left {
+  text-align: left !important;
+}
+
+.u-text-right {
+  text-align: right !important;
+}
+
+.u-text-uppercase {
+  text-transform: uppercase;
+}
+
+.u-no-wrap {
+  white-space: nowrap !important;
+}
+
+.u-center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.u-width-constrain {
+  max-width: 48rem;
+}
+
+.u-borderless {
+  border: 0 !important;
+}
+
+@each $i, $percent in $grid-map {
+
+  .l-flex-rows-#{$i} {
+    @media (min-width: $breakpoint-sm) {
+      display: flex;
+      flex-flow: row wrap;
+
+      > * {
+        flex: 0 0 #{$percent};
+      }
+    }
+  }
+}
+
+.l-flex-columns {
+  @media (min-width: $breakpoint-md) {
+    display: flex;
+
+    > * {
+      flex: 1 1 100%;
+
+      & + * {
+        margin-left: 2rem;
+      }
+    }
+  }
+}
+
+.l-align-center {
+  align-items: center;
+}
+
+.u-pull-left {
+  float: left;
+}
+
+.u-pull-right {
+  float: right;
+}
+
+// --------------------------------------------------------
+// Component utilties
+// --------------------------------------------------------
+.u-more-info {
+
+  .svg {
+    vertical-align: text-top;
+    width: 14px;
+    height: 14px;
+    fill: $gray-300;
+  }
+}

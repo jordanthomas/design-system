@@ -1,12 +1,13 @@
+@import '../core/base';
+
 .badge {
-  // @include as-body('small', 'regular');
+  @include as-body('small', 'regular');
   display: inline-block;
   border-radius: 13px;
   min-width: 26px;
   height: 26px;
   padding: 0 0.5em;
-  // background-color: $gray-200;
-  background-color: #cfcfcf;
+  background-color: $gray-200;
   line-height: 26px;
   text-align: center;
 
@@ -26,19 +27,16 @@
 
   &--success {
     color: #fff;
-    // background-color: $green-300;
-    background-color: #718d50;
+    background-color: $green-300;
   }
 
   &--danger {
     color: #fff;
-    // background-color: $red-300;
-    background-color: #e05d48;
+    background-color: $red-300;
   }
 
   &--dark {
     color: #fff;
-    // background-color: $gray-400;
-    background-color: #747374;
+    background-color: $gray-400;
   }
 }

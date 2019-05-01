@@ -1,0 +1,52 @@
+$z-indices: (
+  modal: 900,
+  header: 800,
+  dropdown: 700,
+  notification: 600,
+  hover: 100,
+  base: 0
+);
+
+$susy: (  columns: 12,
+  gutters: 0.5
+);
+
+$layout-max-width: 90rem; // 1040px
+
+// Responsive Breakpoints
+$breakpoint-items-sidebar: 1088px;
+$breakpoint-items-3-col: 600px;
+$breakpoint-items-4-col: 1300px;
+
+$breakpoint-xs: 23rem;
+$breakpoint-sm: 34rem;
+$breakpoint-md: 48rem;
+$breakpoint-lg: 62rem;
+$breakpoint-xl: 75rem;
+
+$breakpoints: (
+  xs: $breakpoint-xs,
+  sm: $breakpoint-sm,
+  md: $breakpoint-md,
+  lg: $breakpoint-lg,
+  xl: $breakpoint-xl
+);
+
+$breakpoint-item-1-column-bid-min: 520px;
+$breakpoint-item-1-column-bid-max: (768px - 1px);// ($breakpoint-md - 1px)
+$breakpoint-item-2-column-bid-min: 1040px;
+
+$susy-media: (
+  xs: 23rem,
+  sm: 34rem,
+  md: 48rem,
+  lg: 62rem,
+  xl: 75rem
+);
+
+$grid-map: (
+  1: 100%,
+  2: 50%,
+  3: 33%,
+  4: 25%,
+);
