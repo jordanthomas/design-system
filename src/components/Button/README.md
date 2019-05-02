@@ -6,7 +6,7 @@ Basic usage:
 
 ```javascript
 import * as React from 'react';
-import { Button } from '~/public/shared/components';
+import { Button } from '@ebth/design-system';
 
 export default () => {
     return (

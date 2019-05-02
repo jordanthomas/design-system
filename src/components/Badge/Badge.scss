@@ -1,4 +1,4 @@
-@import '../core/base';
+@import '../../stylesheets/base';
 
 .badge {
   @include as-body('small', 'regular');

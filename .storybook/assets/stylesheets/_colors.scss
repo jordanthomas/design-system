@@ -1,0 +1,31 @@
+.pallete-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+}
+
+.palette-grouping {
+  align-self: start;
+  border-radius: 4px;
+  overflow: hidden;
+
+  &__color {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+
+    &--brand {
+      padding: 2rem 1rem;
+      font-weight: 700;
+    }
+
+    &--contrast {
+      color: #fff;
+    }
+
+    > div:first-child {
+      font-family: monospace;
+    }
+  }
+}

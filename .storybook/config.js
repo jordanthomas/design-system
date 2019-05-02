@@ -1,7 +1,7 @@
 import { addParameters, configure } from '@storybook/react';
 import ebthTheme from './ebthTheme';
 
-import '../src/core/global.scss';
+import './assets/stylesheets/storybook.scss';
 
 addParameters({
   options: {
@@ -9,7 +9,7 @@ addParameters({
   },
 });
 
-const req = require.context('../src', true, /\.stories\.js$/);
+const req = require.context('../src/components', true, /\.stories\.js$/);
 function loadStories() {
   // Home page
   require("./home");

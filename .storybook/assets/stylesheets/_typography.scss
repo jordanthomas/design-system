@@ -1,0 +1,64 @@
+.type-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+}
+
+.header {
+
+  &--functional-h1 {
+    @include as-header('h1', 'functional');
+  }
+
+  &--functional-h2 {
+    @include as-header('h2', 'functional');
+  }
+
+  &--functional-h3 {
+    @include as-header('h3', 'functional');
+  }
+
+  &--functional-h4 {
+    @include as-header('h4', 'functional');
+  }
+}
+
+.body {
+
+  &--large-bold {
+    @include as-body('large', 'bold');
+  }
+
+  &--large {
+    @include as-body('large', 'regular');
+  }
+
+  &--large-italic {
+    @include as-body('large', 'italic');
+  }
+
+  &--regular-bold {
+    @include as-body('regular', 'bold');
+  }
+
+  &--regular {
+    @include as-body('regular', 'regular');
+  }
+
+  &--regular-italic {
+    @include as-body('regular', 'italic');
+  }
+
+  &--small-bold {
+    @include as-body('small', 'bold');
+  }
+
+  &--small {
+    @include as-body('small', 'regular');
+  }
+
+  &--small-italic {
+    @include as-body('small', 'italic');
+  }
+}
