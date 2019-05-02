@@ -6,7 +6,6 @@
   "repository": "git@github.com:ebth/design-system.git",
   "author": "Brandon Patram <brandon.patram@ebth.com>",
   "license": "UNLICENSED",
-  "private": true,
   "scripts": {
     "storybook": "start-storybook",
     "build-storybook": "build-storybook -c .storybook -o .out"
