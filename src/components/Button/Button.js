@@ -5,20 +5,9 @@ import React, { type StatelessFunctionalComponent, type Node } from 'react';
 import classNames from 'classnames';
 import { LoadingDots } from '../LoadingDots';
 
-import './Button.scss';
+type ButtonDisplay = 'block' | 'icon-only' | 'icon-only-circle';
 
-type ButtonDisplay =
-  | 'block'
-  | 'icon-only'
-  | 'icon-only-circle'
-  ;
-
-type ButtonSize =
-  | 'extra-sm'
-  | 'sm'
-  | 'lg'
-  | 'xl'
-  ;
+type ButtonSize = 'extra-sm' | 'sm' | 'lg' | 'xl';
 
 type ButtonStyle =
   | 'primary'
@@ -29,8 +18,7 @@ type ButtonStyle =
   | 'secondary'
   | 'secondary-important'
   | 'secondary-danger'
-  | 'link'
-  ;
+  | 'link';
 
 export const Button: StatelessFunctionalComponent<{
   buttonDisplay?: ButtonDisplay,
@@ -40,7 +28,7 @@ export const Button: StatelessFunctionalComponent<{
   className?: string,
   disabled?: boolean,
   inFlight?: boolean,
-  type?: 'button' | 'submit' | 'reset',
+  type?: 'button' | 'submit' | 'reset'
 }> = ({
   buttonDisplay,
   buttonSize,
@@ -59,9 +47,9 @@ export const Button: StatelessFunctionalComponent<{
     {
       [`btn--${buttonDisplay || ''}`]: !!buttonDisplay,
       [`btn--${buttonSize || ''}`]: !!buttonSize,
-      [`btn--${buttonStyle || ''}`]: !!buttonStyle,
+      [`btn--${buttonStyle || ''}`]: !!buttonStyle
     },
-    className,
+    className
   );
 
   return (
@@ -71,12 +59,8 @@ export const Button: StatelessFunctionalComponent<{
       disabled={isDisabled}
       {...otherProps}
     >
-      {inFlight &&
-        <LoadingDots />
-      }
-      {!inFlight &&
-        children
-      }
+      {inFlight && <LoadingDots />}
+      {!inFlight && children}
     </button>
   );
 };
