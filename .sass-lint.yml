@@ -12,7 +12,6 @@ options:
 # File Options
 files:
   include: '**/*.scss'
-  ignore: './app/assets/stylesheets/**/vendor/**/*.scss'
 # Rule Configuration
 # https://github.com/sasstools/sass-lint/tree/master/docs/rules
 rules:
