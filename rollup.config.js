@@ -9,7 +9,8 @@ export default [
     output: {
       file: 'dist/index.js',
       format: 'cjs',
-      exports: 'named'
+      exports: 'named',
+      sourcemap: true
     },
     plugins: [
       // use the node method of resolving file imports. by default things

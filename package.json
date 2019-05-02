@@ -7,9 +7,12 @@
   "author": "Brandon Patram <brandon.patram@ebth.com>",
   "license": "UNLICENSED",
   "scripts": {
-    "storybook": "start-storybook",
-    "build-storybook": "build-storybook -c .storybook -o .out",
-    "bundle": "rollup --config"
+    "storybook:watch": "start-storybook",
+    "storybook:build": "build-storybook -c .storybook -o .out",
+    "dist:build": "rollup --config",
+    "dist:watch": "rollup --config -w",
+    "build": "concurrently \"npm:storybook:build\" \"npm:dist:build\"",
+    "dev": "concurrently \"npm:storybook:watch\" \"npm:dist:watch\""
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
@@ -22,6 +25,7 @@
     "@storybook/react": "^5.0.10",
     "@storybook/theming": "^5.0.10",
     "babel-loader": "^8.0.5",
+    "concurrently": "^4.1.0",
     "node-sass": "^4.11.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
