@@ -2,6 +2,11 @@ import babel from 'rollup-plugin-babel';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import flowEntry from 'rollup-plugin-flow-entry';
+import postcss from 'rollup-plugin-postcss';
+// so this node-sass import actaully does nothing
+// but i'm leaving it in here as a reminder that, while we don't use it
+// directly... it is still needed for postcss to pickup sass files correctly
+import 'node-sass';
 
 export default [
   {
@@ -18,6 +23,10 @@ export default [
       resolve(),
       commonjs({
         include: 'node_modules/**'
+      }),
+      postcss({
+        sourceMap: true,
+        extract: true
       }),
       // export flow typings.. this is actually really lazy
       // since our code is in flow, flow will just reference the raw source
