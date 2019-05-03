@@ -8,14 +8,21 @@ import postcss from 'rollup-plugin-postcss';
 // directly... it is still needed for postcss to pickup sass files correctly
 import 'node-sass';
 
+// TODO: add license name in banner once we figure that out
+const bannerText = `/*!
+  Copyright (c) ${new Date().getFullYear()} EBTH Inc.
+  https://github.com/ebth/design-system
+*/\n`;
+
 export default [
   {
     input: 'src/index.js',
     output: {
       file: 'dist/index.js',
-      format: 'cjs',
+      format: 'esm',
       exports: 'named',
-      sourcemap: true
+      sourcemap: true,
+      banner: bannerText
     },
     plugins: [
       // use the node method of resolving file imports. by default things
