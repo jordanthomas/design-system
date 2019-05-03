@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "UI Component Library for EBTH",
   "main": "dist/index.js",
-  "module": "src/index.js",
+  "module": "dist/index.js",
   "repository": "https://github.com/ebth/design-system",
   "author": "Brandon Patram <brandon.patram@ebth.com>",
   "license": "UNLICENSED",
