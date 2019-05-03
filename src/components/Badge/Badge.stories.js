@@ -19,13 +19,13 @@ storiesOf('Badge', module)
     () => (
       <div className="u-p8">
         <Badge className="u-mr2">Badge Text</Badge>
-        <Badge badgeStyle="danger" className="u-mr2">
+        <Badge status="neutral" className="u-mr2">
           Badge Text
         </Badge>
-        <Badge badgeStyle="success" className="u-mr2">
+        <Badge status="positive" className="u-mr2">
           Badge Text
         </Badge>
-        <Badge badgeStyle="dark">Badge Text</Badge>
+        <Badge status="negative">Badge Text</Badge>
       </div>
     ),
     { skip: 1 }

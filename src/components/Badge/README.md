@@ -21,8 +21,8 @@ export default () => {
 
 ### <Foo/> API
 
-* `badgeSize: 'mini' | 'wide'` - Optional
-* `badgeStyle: 'success' | 'danger' | 'dark'` - Optional
+* `size: 'mini'` - Optional
+* `status: 'neutral' | 'positive' | 'negative'` - Optional
 * `children: Node` - Optional
 * `className: string` - Optional
 
@@ -30,5 +30,5 @@ export default () => {
 
 These properties are passed to every presentational (styled) component that is exported:
 
-* `badgeSize: 'mini' | 'wide'`
-* `badgeStyle: 'success' | 'danger' | 'dark'`
+* `size: 'mini'`
+* `status: 'neutral' | 'positive' | 'negative'`

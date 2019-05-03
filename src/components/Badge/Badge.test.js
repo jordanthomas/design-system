@@ -3,7 +3,7 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 
-import Badge from './Badge';
+import { Badge } from './Badge';
 
 describe('<Badge />', () => {
   describe('Badge content', () => {
@@ -29,16 +29,16 @@ describe('<Badge />', () => {
 
     it('renders the badge with the provided style class', () => {
       const wrapper = shallow(
-        <Badge badgeStyle="danger">
+        <Badge status="negative">
           Sheriff
         </Badge>
       );
-      expect(wrapper.prop('className')).toEqual('badge badge--danger');
+      expect(wrapper.prop('className')).toEqual('badge badge--negative');
     });
 
     it('renders the badge with the provided size class', () => {
       const wrapper = shallow(
-        <Badge badgeSize="mini">
+        <Badge size="mini">
           Sheriff
         </Badge>
       );
@@ -47,11 +47,11 @@ describe('<Badge />', () => {
 
     it('renders the badge with the provided combination of classes', () => {
       const wrapper = shallow(
-        <Badge badgeStyle="danger" badgeSize="mini" className="another-class and-another">
+        <Badge status="negative" size="mini" className="another-class and-another">
           Sheriff
         </Badge>
       );
-      expect(wrapper.prop('className')).toEqual('badge badge--mini badge--danger another-class and-another');
+      expect(wrapper.prop('className')).toEqual('badge badge--mini badge--negative another-class and-another');
     });
   });
 });

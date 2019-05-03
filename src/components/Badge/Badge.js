@@ -5,23 +5,23 @@ import classNames from 'classnames';
 
 import './Badge.scss';
 
-type BadgeSize = 'mini' | 'wide';
+type BadgeSize = 'mini';
 
-type BadgeStyle = 'success' | 'danger' | 'dark';
+type BadgeStatus = 'neutral' | 'positive' | 'negative';
 
 export const Badge: StatelessFunctionalComponent<{
-  badgeSize?: BadgeSize,
-  badgeStyle?: BadgeStyle,
+  size?: BadgeSize,
+  status?: BadgeStatus,
   children?: Node,
-  className?: string
-}> = ({ badgeSize, badgeStyle, children, className, ...otherProps }) => {
+  className?: string,
+}> = ({ size, status, children, className, ...otherProps }) => {
   const badgeClasses = classNames(
     'badge',
     {
-      [`badge--${badgeSize || ''}`]: !!badgeSize,
-      [`badge--${badgeStyle || ''}`]: !!badgeStyle
+      [`badge--${size || ''}`]: !!size,
+      [`badge--${status || ''}`]: !!status,
     },
-    className
+    className,
   );
 
   return (

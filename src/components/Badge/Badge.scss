@@ -6,7 +6,7 @@
   border-radius: 13px;
   min-width: 26px;
   height: 26px;
-  padding: 0 0.5em;
+  padding: 0 0.75em;
   background-color: $gray-200;
   line-height: 26px;
   text-align: center;
@@ -21,22 +21,17 @@
     line-height: 18px;
   }
 
-  &--wide {
-    padding: 0 1.5em;
+  &--neutral {
+    background-color: $teal-100;
   }
 
-  &--success {
+  &--positive {
     color: #fff;
-    background-color: $green-300;
+    background-color: $feedback-success;
   }
 
-  &--danger {
+  &--negative {
     color: #fff;
-    background-color: $red-300;
-  }
-
-  &--dark {
-    color: #fff;
-    background-color: $gray-400;
+    background-color: $feedback-error;
   }
 }
