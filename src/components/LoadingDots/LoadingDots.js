@@ -3,6 +3,8 @@
 import React, { type StatelessFunctionalComponent } from 'react';
 import classNames from 'classnames';
 
+import './LoadingDots.scss';
+
 export const LoadingDots: StatelessFunctionalComponent<{
   className?: string
 }> = ({ className, ...cleanedProps }) => {

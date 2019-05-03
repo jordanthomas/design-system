@@ -5,7 +5,7 @@ import JSXAddon from 'storybook-addon-jsx';
 import { withReadme } from 'storybook-readme';
 
 import { Badge } from './Badge';
-import './Badge.scss';
+
 import BadgeREADME from './README.md';
 
 setAddon(JSXAddon);

@@ -3,6 +3,8 @@
 import React, { type StatelessFunctionalComponent, type Node } from 'react';
 import classNames from 'classnames';
 
+import './Badge.scss';
+
 type BadgeSize = 'mini' | 'wide';
 
 type BadgeStyle = 'success' | 'danger' | 'dark';

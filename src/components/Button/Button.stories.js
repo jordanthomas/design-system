@@ -7,7 +7,7 @@ import JSXAddon from 'storybook-addon-jsx';
 import { withReadme } from 'storybook-readme';
 
 import { Button } from './Button';
-import './Button.scss';
+
 import ButtonREADME from './README.md';
 
 setAddon(JSXAddon);

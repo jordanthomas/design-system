@@ -3,6 +3,9 @@
 
 import React, { type StatelessFunctionalComponent, type Node } from 'react';
 import classNames from 'classnames';
+
+import './Button.scss';
+
 import { LoadingDots } from '../LoadingDots';
 
 type ButtonDisplay = 'block' | 'icon-only' | 'icon-only-circle';
