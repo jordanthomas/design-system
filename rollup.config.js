@@ -54,6 +54,6 @@ export default [
       })
     ],
     // TODO: just pull in from package.json peerDependencies and dependencies
-    external: ['react', 'react-dom']
+    external: ['react', 'react-dom', 'classnames']
   }
 ];
