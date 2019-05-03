@@ -26,7 +26,9 @@ export default [
       }),
       postcss({
         sourceMap: true,
-        extract: true
+        extract: true,
+        inject: false,
+        use: ['sass']
       }),
       // export flow typings.. this is actually really lazy
       // since our code is in flow, flow will just reference the raw source
