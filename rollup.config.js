@@ -35,7 +35,14 @@ export default [
         sourceMap: true,
         extract: true,
         inject: false,
-        use: ['sass']
+        use: ['sass'],
+        modules: {
+          // we do not want to transform our css class names since they will
+          // also be referenced by components outside of our react components.
+          // once all components render via the react component we can use the
+          // default class name transformations!
+          generateScopedName: '[local]'
+        }
       }),
       // export flow typings.. this is actually really lazy
       // since our code is in flow, flow will just reference the raw source
