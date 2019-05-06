@@ -45,6 +45,26 @@ jobs:
       - store_test_results:
           path: reports
 
+  publish:
+    docker:
+      - image: circleci/node:10.11
+    steps:
+      - checkout
+      - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "yarn.lock" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
+      - run: yarn dist:build
+      # TODO: uncomment out when ready to publish
+      # - run: yarn publish
+
   bake_visual_tests:
     docker:
       - image: circleci/node:10.11
@@ -78,5 +98,13 @@ workflows:
     jobs:
       - bake_visual_tests:
           filters:
+            branches:
+              only: master
+  tagged-build:
+    jobs:
+      - publish:
+          filters:
+            tags:
+              only: /v[0-9]+(\.[0-9]+)*/
             branches:
               only: master
