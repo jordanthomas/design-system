@@ -4,13 +4,10 @@
 #
 version: 2
 jobs:
-  build:
+  test:
     docker:
-      # specify the version you desire here
       - image: circleci/node:10.11
-
     working_directory: ~/repo
-
     steps:
       - checkout
 
@@ -36,6 +33,50 @@ jobs:
       - run: yarn lint:scss
       # run tests
       - run: yarn test
+
+      # pull in last visual regression images (from version)
+      # build static storybook and compare visual tests
+      - restore_cache:
+          key: v1-visual-tests-{{ node -p "require('./package.json').version" }}
+      - run: yarn storybook:build
+      - run: yarn test:visual-static
+
       # store junit result files
       - store_test_results:
           path: reports
+
+  bake_visual_tests:
+    docker:
+      - image: circleci/node:10.11
+    steps:
+      - checkout
+      - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "yarn.lock" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
+      # build story book and generate new screen caps of it
+      - run: yarn storybook:build
+      - run: yarn loki:build-static
+      - save_cache:
+          paths:
+            - .loki
+          key: v1-visual-tests-{{ node -p "require('./package.json').version" }}
+
+workflows:
+  version: 2
+  dev-branch:
+    jobs:
+      - test
+  master-build:
+    jobs:
+      - bake_visual_tests:
+          filters:
+            branches:
+              only: master
