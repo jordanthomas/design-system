@@ -6,20 +6,15 @@ version: 2
 jobs:
   test:
     docker:
-      - image: circleci/node:10.11
-    working_directory: ~/repo
+      - image: circleci/node:10.11-browsers
     steps:
       - checkout
-
-      # Download and cache dependencies
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "yarn.lock" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
-
       - run: yarn install
-
       - save_cache:
           paths:
             - node_modules
@@ -69,7 +64,7 @@ jobs:
 
   bake_visual_tests:
     docker:
-      - image: circleci/node:10.11
+      - image: circleci/node:10.11-browsers
     steps:
       - checkout
       - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
