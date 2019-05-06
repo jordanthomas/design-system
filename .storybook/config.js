@@ -1,4 +1,5 @@
 import { addParameters, configure } from '@storybook/react';
+import 'loki/configure-react';
 import ebthTheme from './ebthTheme';
 
 import './assets/stylesheets/storybook.scss';
