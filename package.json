@@ -14,7 +14,8 @@
     "dist:watch": "rollup --config -w",
     "test": "jest",
     "test:watch": "jest --watch",
-    "lint": "prettier --check 'src/**/*.js'",
+    "lint:js": "prettier --check 'src/**/*.js'",
+    "lint:scss": "sass-lint --config=.sass-lint.yml 'src/**/*.scss' --format=junit --output=reports/sass-lint.xml -v",
     "build": "concurrently \"npm:storybook:build\" \"npm:dist:build\"",
     "dev": "concurrently \"npm:storybook:watch\" \"npm:dist:watch\" \"npm:test:watch\""
   },
@@ -46,6 +47,7 @@
     "rollup-plugin-flow-entry": "^0.3.1",
     "rollup-plugin-node-resolve": "^4.2.3",
     "rollup-plugin-postcss": "^2.0.3",
+    "sass-lint": "^1.13.1",
     "sass-loader": "^7.1.0",
     "storybook-addon-jsx": "^7.1.2",
     "storybook-readme": "^5.0.3"
