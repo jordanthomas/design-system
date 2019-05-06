@@ -14,7 +14,10 @@ storiesOf('Loading Dots', module)
     'stand alone',
     () => (
       <div className="u-p8">
-        <h3><LoadingDots className="u-mr2" />System Processing</h3>
+        <h3>
+          <LoadingDots className="u-mr2" />
+          System Processing
+        </h3>
       </div>
     ),
     { skip: 2 }

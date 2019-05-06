@@ -13,15 +13,15 @@ export const Badge: StatelessFunctionalComponent<{
   size?: BadgeSize,
   status?: BadgeStatus,
   children?: Node,
-  className?: string,
+  className?: string
 }> = ({ size, status, children, className, ...otherProps }) => {
   const badgeClasses = classNames(
     'badge',
     {
       [`badge--${size || ''}`]: !!size,
-      [`badge--${status || ''}`]: !!status,
+      [`badge--${status || ''}`]: !!status
     },
-    className,
+    className
   );
 
   return (
