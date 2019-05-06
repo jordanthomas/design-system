@@ -31,8 +31,10 @@ jobs:
 
       # pull in last visual regression images (from version)
       # build static storybook and compare visual tests
+      # work around for using package version as cache key
+      - run: yarn run --silent info:version > _version
       - restore_cache:
-          key: v1-visual-tests-{{ yarn run --silent info:version }}
+          key: v1-visual-tests-{{ checksum "_tmp_file" }}
       - run: yarn storybook:build
       - run: yarn test:visual-static
       - store_artifacts:
@@ -81,10 +83,12 @@ jobs:
       # build story book and generate new screen caps of it
       - run: yarn storybook:build
       - run: yarn loki:build-static
+      # work around for using package version as cache key
+      - run: yarn run --silent info:version > _version
       - save_cache:
           paths:
             - .loki
-          key: v1-visual-tests-{{ yarn run --silent info:version }}
+          key: v1-visual-tests-{{ checksum "_tmp_file" }}
 
 workflows:
   version: 2
@@ -102,4 +106,5 @@ workflows:
       - publish:
           filters:
             tags:
-              only: /v[0-9]+(\.[0-9]+)*/
+              only:
+                - /v[0-9]+(\.[0-9]+)*/
