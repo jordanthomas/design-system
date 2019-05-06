@@ -32,7 +32,7 @@ jobs:
       # pull in last visual regression images (from version)
       # build static storybook and compare visual tests
       - restore_cache:
-          key: v1-visual-tests-{{ node -p "require('./package.json').version" }}
+          key: v1-visual-tests-{{ yarn run --silent info:version }}
       - run: yarn storybook:build
       - run: yarn test:visual-static
       - store_artifacts:
@@ -84,7 +84,7 @@ jobs:
       - save_cache:
           paths:
             - .loki
-          key: v1-visual-tests-{{ node -p "require('./package.json').version" }}
+          key: v1-visual-tests-{{ yarn run --silent info:version }}
 
 workflows:
   version: 2

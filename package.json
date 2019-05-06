@@ -23,7 +23,8 @@
     "loki:build-static": "loki update --reactUri file:.out",
     "test:visual": "loki test --port 52033 --requireReference --verboseRenderer",
     "test:visual-static": "loki test --requireReference --reactUri file:.out --verboseRenderer",
-    "loki:approve": "loki approve"
+    "loki:approve": "loki approve",
+    "info:version": "node -p \"require('./package.json').version\""
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
