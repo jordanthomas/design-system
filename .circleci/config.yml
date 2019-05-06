@@ -89,6 +89,8 @@ jobs:
           paths:
             - .loki
           key: v1-visual-tests-{{ checksum "_version" }}
+      - store_artifacts:
+          path: .loki
 
 workflows:
   version: 2
