@@ -40,6 +40,8 @@ jobs:
           key: v1-visual-tests-{{ node -p "require('./package.json').version" }}
       - run: yarn storybook:build
       - run: yarn test:visual-static
+      - store_artifacts:
+          path: .loki
 
       # store junit result files
       - store_test_results:
