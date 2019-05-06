@@ -34,7 +34,7 @@ jobs:
       # work around for using package version as cache key
       - run: yarn run --silent info:version > _version
       - restore_cache:
-          key: v1-visual-tests-{{ checksum "_tmp_file" }}
+          key: v1-visual-tests-{{ checksum "_version" }}
       - run: yarn storybook:build
       - run: yarn test:visual-static
       - store_artifacts:
@@ -88,7 +88,7 @@ jobs:
       - save_cache:
           paths:
             - .loki
-          key: v1-visual-tests-{{ checksum "_tmp_file" }}
+          key: v1-visual-tests-{{ checksum "_version" }}
 
 workflows:
   version: 2
