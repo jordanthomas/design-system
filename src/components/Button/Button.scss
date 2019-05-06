@@ -1,5 +1,6 @@
 @import '../../stylesheets/base';
 
+
 @mixin btn-focus-shadow($color) {
   &:focus {
 
@@ -88,11 +89,6 @@
       color: $text-color;
       background-color: transparent;
     }
-  }
-
-  &--badged {
-    position: relative;
-    overflow: visible;
   }
 
   &--block {
@@ -186,6 +182,26 @@
     }
   }
 
+  // Only to be used for global header navigation
+  &--navigation {
+    border-color: transparent;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    background: transparent;
+
+    &:hover,
+    &:focus {
+
+      &:not([disabled]) {
+        border-color: $gray-100;
+        color: $link-color;
+        background: $gray-100;
+      }
+    }
+
+    @include btn-focus-shadow($link-color);
+  }
+
   &--following {
     // Removes padding because it requires setting an explicit width on the
     // button which will prevent jumping width when changing the button's text
@@ -217,19 +233,23 @@
   }
 
   &__icon {
-    display: inline-block;
-    vertical-align: middle;
     $dims: 1.3em;
     $fix: 0.2em;// arbitrary visual adjustment (shifts icon upward)
     $offset: 0 - ($dims / 2);
-    margin: ($offset - $fix) 0.3em $offset 0;
+    $spacing: 0.3em;
+
+    display: inline-block;
+    vertical-align: middle;
+    margin: ($offset - $fix) $spacing $offset 0;
     width: $dims;
     height: $dims;
     fill: currentColor;
     transform: scale(1);
+    transition: fill ease-in-out $btn-hover-timing;
 
     &--right {
-      margin: ($offset - $fix) 0 $offset 0.3em;
+      margin-right: 0;
+      margin-left: $spacing;
     }
 
     #{$b}--icon-only &,
@@ -239,17 +259,8 @@
     }
   }
 
+  // Prevents badges within buttons from increasing the line-height
   &__badge {
-    z-index: 1;
-    position: absolute;
-    top: -0.85em;
-    right: -0.25em;
-    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
-    will-change: opacity, transform;
-
-    &[data-count='0'] {
-      opacity: 0;
-      transform: scale(0);
-    }
+    margin: -4px 0;
   }
 }

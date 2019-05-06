@@ -21,7 +21,8 @@ type ButtonStyle =
   | 'secondary'
   | 'secondary-important'
   | 'secondary-danger'
-  | 'link';
+  | 'link'
+  | 'navigation';
 
 export const Button: StatelessFunctionalComponent<{
   buttonDisplay?: ButtonDisplay,

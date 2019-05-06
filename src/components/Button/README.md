@@ -23,7 +23,7 @@ export default () => {
 
 * `buttonDisplay: 'block' | 'iconOnly'` - Optional
 * `buttonSize: 'extra-sm' | 'sm' | 'lg' | 'xl'` - Optional
-* `buttonStyle: 'primary' | 'primary-important' | 'primary-contrast' | 'primary-danger' | 'secondary' | 'secondary-important' | 'secondary-danger' | 'link'` - Optional
+* `buttonStyle: 'primary' | 'primary-important' | 'primary-contrast' | 'primary-danger' | 'secondary' | 'secondary-important' | 'secondary-danger' | 'link' | 'navigation'` - Optional
 * `children: Node` - Optional
 * `className: string` - Optional
 * `disabled: boolean` - Optional
