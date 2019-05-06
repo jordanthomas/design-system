@@ -30,6 +30,8 @@ jobs:
 
       # ensure js files formatted correctly
       - run: yarn lint:js
+      # ensure not typing errors in js
+      - run: yarn lint:flow
       # ensure scss files formatte correctly
       - run: yarn lint:scss
       # run tests
