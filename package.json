@@ -12,9 +12,11 @@
     "storybook:build": "build-storybook -c .storybook -o .out",
     "dist:build": "rollup --config",
     "dist:watch": "rollup --config -w",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "prettier --check 'src/**/*.js'",
     "build": "concurrently \"npm:storybook:build\" \"npm:dist:build\"",
-    "dev": "concurrently \"npm:storybook:watch\" \"npm:dist:watch\"",
-    "test": "jest"
+    "dev": "concurrently \"npm:storybook:watch\" \"npm:dist:watch\" \"npm:test:watch\""
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
@@ -34,6 +36,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest-cli": "^24.7.1",
     "node-sass": "^4.12.0",
+    "prettier": "^1.17.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "rollup": "^1.10.1",

@@ -28,5 +28,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "yarn.lock" }}
 
-      # run tests!
+      # ensure js files formatted correctly
+      - run: yarn lint
+      # run tests
       - run: yarn test
