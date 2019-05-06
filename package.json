@@ -15,6 +15,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "lint:js": "prettier --check 'src/**/*.js'",
+    "lint:flow": "flow check",
     "lint:scss": "sass-lint --config=.sass-lint.yml 'src/**/*.scss' --format=junit --output=reports/sass-lint.xml -v",
     "build": "concurrently \"npm:storybook:build\" \"npm:dist:build\"",
     "dev": "concurrently \"npm:storybook:watch\" \"npm:dist:watch\" \"npm:test:watch\""
@@ -34,7 +35,9 @@
     "concurrently": "^4.1.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
+    "flow-bin": "^0.98.1",
     "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.8.0",
     "jest-cli": "^24.7.1",
     "node-sass": "^4.12.0",
     "prettier": "^1.17.0",
