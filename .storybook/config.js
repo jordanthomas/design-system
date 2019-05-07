@@ -16,7 +16,7 @@ function loadStories() {
   require("./foundation");
   // automatically import all files ending in *.stories.js
   req.keys().forEach(filename => req(filename));
-  require("./utilities");
+  require("./utility");
 }
 
 configure(loadStories, module);
