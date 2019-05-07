@@ -19,12 +19,12 @@
     "lint:scss": "sass-lint --config=.sass-lint.yml 'src/**/*.scss' --format=junit --output=reports/sass-lint.xml -v",
     "build": "concurrently \"npm:storybook:build\" \"npm:dist:build\"",
     "dev": "concurrently \"npm:storybook:watch\" \"npm:dist:watch\" \"npm:test:watch\"",
-    "loki:build": "loki update --port 52033",
-    "loki:build-static": "loki update --reactUri file:.out",
-    "test:visual": "loki test --port 52033 --requireReference --verboseRenderer",
-    "test:visual-static": "loki test --requireReference --reactUri file:.out --verboseRenderer",
-    "loki:approve": "loki approve",
-    "info:version": "node -p \"require('./package.json').version\""
+    "loki:build-reference": "loki update --port 52033",
+    "loki:build-reference-static": "loki update --reactUri file:.out",
+    "loki:build-current": "loki update --port 52033 --reference .loki/current",
+    "loki:build-current-static": "loki update --reactUri file:.out --reference .loki/current",
+    "test:visual": "reg-cli .loki/current .loki/reference .loki/difference -R .loki/visual.html -J .loki/visual.json",
+    "loki:approve": "loki approve"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
@@ -51,6 +51,7 @@
     "prettier": "^1.17.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "reg-cli": "^0.14.1",
     "rollup": "^1.10.1",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.3.4",

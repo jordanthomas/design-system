@@ -12,8 +12,6 @@ jobs:
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "yarn.lock" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
       - run: yarn install
       - save_cache:
           paths:
@@ -29,18 +27,15 @@ jobs:
       # run tests
       - run: yarn test
 
-      # pull in last visual regression images (from version)
-      # build static storybook and compare visual tests
-      # work around for using package version as cache key
-      - run: yarn run --silent info:version > _version
-      - restore_cache:
-          key: v1-visual-tests-{{ checksum "_version" }}
+      # build static storybook
       - run: yarn storybook:build
-      - run: yarn test:visual-static
+      # generate images from current state
+      - run: yarn loki:build-current-static
+      # diff and generate report
+      - run: yarn test:visual
       - store_artifacts:
           path: .loki
-
-      # store junit result files
+      # store junit result files (js tests, sass lint)
       - store_test_results:
           path: reports
 
@@ -53,8 +48,6 @@ jobs:
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "yarn.lock" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
       - run: yarn install
       - save_cache:
           paths:
@@ -64,45 +57,11 @@ jobs:
       # TODO: uncomment out when ready to publish
       # - run: yarn publish
 
-  bake_visual_tests:
-    docker:
-      - image: circleci/node:10.11-browsers
-    steps:
-      - checkout
-      - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "yarn.lock" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-      - run: yarn install
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "yarn.lock" }}
-      # build story book and generate new screen caps of it
-      - run: yarn storybook:build
-      - run: yarn loki:build-static
-      # work around for using package version as cache key
-      - run: yarn run --silent info:version > _version
-      - save_cache:
-          paths:
-            - .loki
-          key: v1-visual-tests-{{ checksum "_version" }}
-      - store_artifacts:
-          path: .loki
-
 workflows:
   version: 2
   dev-branch:
     jobs:
       - test
-  master-build:
-    jobs:
-      - bake_visual_tests:
-          filters:
-            branches:
-              only: master
   tagged-build:
     jobs:
       - publish:
