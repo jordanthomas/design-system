@@ -23,7 +23,7 @@
     "loki:build-reference-static": "loki update --reactUri file:.out",
     "loki:build-current": "loki update --port 52033 --reference .loki/current",
     "loki:build-current-static": "loki update --reactUri file:.out --reference .loki/current",
-    "test:visual": "reg-cli .loki/current .loki/reference .loki/difference -R reports/visual.html -J reports/visual.json",
+    "test:visual": "reg-cli .loki/current .loki/reference .loki/difference -R .loki/visual.html -J .loki/visual.json",
     "loki:approve": "loki approve"
   },
   "devDependencies": {
