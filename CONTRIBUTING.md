@@ -1,6 +1,6 @@
 # Contributing
 
-## Local Development
+## Local development
 
 1. Fork or clone this repo
 1. Install dependencies (`yarn install`)
@@ -21,7 +21,7 @@ If you want to work on this library while consuming it in another project you ca
     - Run this in your project's folder
     - If you use Flowtype you may [lose typing hints](https://github.com/facebook/flow/issues/4015).
 
-## Code Style and Linting
+## Code style and linting
 
 We use a variety of linters for configuring your IDE/Editor and for each language. Below is a breakdown of the tools we use and what their purpose is:
 
@@ -40,13 +40,13 @@ We use a variety of linters for configuring your IDE/Editor and for each languag
 
 ## Testing
 
-### Javascript Testing
+### Javascript testing
 
-You can run the Jest tests via `yarn test`. These tests will run automatically on file changes when using `yarn dev` or when using `yarn test:watch`.
+You can run the [Jest](https://jestjs.io/) tests via `yarn test`. These tests will run automatically on file changes when using `yarn dev` or when using `yarn test:watch`.
 
-### Visual Regression Testing
+### Visual regression testing
 
-Our visual regression test suite uses a few different tools, mainly: [Loki](https://loki.js.org/), [RegViz](https://github.com/reg-viz/reg-cli/), and [Storybook](https://storybook.js.org/). Loki will take screenshots of each Storybook story in our documentation. While Loki can handle testing (diffing) images we use RegCLI instead. This allows us to generate reports as well as have tighter controls over how we diff images and how the diff'd image appears.
+Our visual regression test suite uses a few different tools, mainly: [Loki](https://loki.js.org/), [RegViz](https://github.com/reg-viz/reg-cli/), and [Storybook](https://storybook.js.org/). Loki will take screenshots of each Storybook stories. While Loki can handle testing (diffing) images we use RegCLI instead; this allows us to generate reports as well as have tighter controls over how we diff images and how the diff'd image are generated.
 
 The visual regression testing process operates something like the following:
 
@@ -54,28 +54,28 @@ The visual regression testing process operates something like the following:
 1. Build a `current` state of the Storybook docs after making code changes
 1. Compare the current and reference state images using RegCLI to identify differences and build a report
 
-Steps to run tests:
+#### Running visual regression tests
 
 1. Start Storybook server or build Storybook docs
     - Start development watch process: `yarn dev`
     - or start server: `yarn storybook:watch`
     - or build static site: `yarn storybook:build`
-1. Build the `current` state to the last approved state:
+1. Build the `current` state from Storybook:
     - If using the Storybook server (or `yarn dev`): `yarn loki:build-current`
     - If using a built storybook static site: `yarn loki:build-current-static`
 1. Compare the `current` to the `reference` state:
     - `yarn test:visual`
 
-Approving visual changes:
+#### Approving visual changes
 
 1. Run your visual regression tests (see steps above)
 1. Review diffs and ensure everything is looking correct
 1. Approve the changes
     - `yarn loki:approve`
 
-Rebuilding current visual regression images:
+#### Rebuilding reference images
 
-You shouldn't have to run these commands unless doing a substantial overhaul to the documentation or changing Loki configuration.
+You shouldn't have to run these commands unless doing a substantial overhaul to the documentation or changing Loki configuration. In most cases simply approving the visual changes after running the tests is sufficient.
 
 1. Start Storybook server or build Storybook docs
     - Start development watch process: `yarn dev`
