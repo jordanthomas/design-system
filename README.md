@@ -33,7 +33,7 @@ UI Component library and style helper mixins for SCSS.
     );
     ```
 
-1. Import shared utility classes
+1. Import shared utility classes (optional)
 
     ```scss
     @import '@ebth/design-system/dist/utility';
@@ -44,7 +44,7 @@ UI Component library and style helper mixins for SCSS.
 1. Define your styles
 
     ```scss
-    // import base utility mixins and variables
+    // import base utility mixins and variables (if needed)
     @import '@ebth/design-system/dist/base';
 
     .my-button {
