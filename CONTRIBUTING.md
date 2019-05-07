@@ -46,17 +46,25 @@ You can run the Jest tests via `yarn test`. These tests will run automatically o
 
 ### Visual Regression Testing
 
-We use a tool called [Loki](https://loki.js.org/) which builds on top of [Storybook](https://storybook.js.org/). Loki will go through each story in our Storybook docs (either from a storybook server or from the static site) and take a screenshot. Later on it will compare those screenshots to the current state of things to identify diffs. The concepts are pretty simple, Loki uses a `reference` folder to store the current 'approved' screenshots, after you make changes you can create new screenshots of the current state. Those screenshots will be stored in the `current` directory. When running the visual regression test command it will simply compare the `current` to the `references` and generate a new image for any that do not look the same, those generated images will be placed in the `difference` directory.
+Our visual regression test suite uses a few different tools, mainly: [Loki](https://loki.js.org/), [RegViz](https://github.com/reg-viz/reg-cli/), and [Storybook](https://storybook.js.org/). Loki will take screenshots of each Storybook story in our documentation. While Loki can handle testing (diffing) images we use RegCLI instead. This allows us to generate reports as well as have tighter controls over how we diff images and how the diff'd image appears.
+
+The visual regression testing process operates something like the following:
+
+1. Build a `reference` state of the Storybook docs (this is commited as a part of this repo)
+1. Build a `current` state of the Storybook docs after making code changes
+1. Compare the current and reference state images using RegCLI to identify differences and build a report
 
 Steps to run tests:
 
-1. Start storybook server or build storybook docs
+1. Start Storybook server or build Storybook docs
     - Start development watch process: `yarn dev`
     - or start server: `yarn storybook:watch`
     - or build static site: `yarn storybook:build`
-1. Compare the current state to the last approved state:
-    - If using the Storybook server (or `yarn dev`): `yarn test:visual`
-    - If using a built storybook static site: `yarn test:visual-static`
+1. Build the `current` state to the last approved state:
+    - If using the Storybook server (or `yarn dev`): `yarn loki:build-current`
+    - If using a built storybook static site: `yarn loki:build-current-static`
+1. Compare the `current` to the `reference` state:
+    - `yarn test:visual`
 
 Approving visual changes:
 
@@ -69,10 +77,10 @@ Rebuilding current visual regression images:
 
 You shouldn't have to run these commands unless doing a substantial overhaul to the documentation or changing Loki configuration.
 
-1. Start storybook server or build storybook docs
+1. Start Storybook server or build Storybook docs
     - Start development watch process: `yarn dev`
     - or start server: `yarn storybook:watch`
     - or build static site: `yarn storybook:build`
-1. Generate images from the current state:
-    - If using the Storybook server (or `yarn dev`): `yarn loki:build`
-    - If using a built storybook static site: `yarn loki:build-static`
+1. Generate `reference` images from the current Storybook state:
+    - If using the Storybook server (or `yarn dev`): `yarn loki:build-reference`
+    - If using a built storybook static site: `yarn loki:build-reference-static`
