@@ -70,21 +70,4 @@ UI Component library and style helper mixins for SCSS.
 
 ## Contributing
 
-1. Fork or clone this repo
-1. Install dependencies (`yarn install`)
-1. Use Flowtype
-1. Use Prettier and SassLint linters
-1. Use Editorconfig
-1. Start the development watch process (`yarn dev`)
-    - Starts storybook server
-    - Rebuild distributable on changes
-    - Run Jest tests on changes
-1. Modify whatever you need
-
-If you want to work on this library while consuming it in another project you can use `yarn link` like so:
-
-1. Link this project `yarn link`
-1. Start development watch process `yarn dev`
-1. Use the link in your project `yarn link @ebth/design-system`
-    - Run this in your project's folder
-    - If you use Flowtype you may [lose typing hints](https://github.com/facebook/flow/issues/4015).
+Please see documentation for [contributing here](./CONTRIBUTING.md).
