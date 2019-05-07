@@ -1,24 +1,6 @@
 import React from 'react';
-import classNames from 'classnames';
-
 import { storiesOf } from '@storybook/react';
-
-function renderColor(variable, hex, contrast: false, brand: false) {
-  const colorClasses = classNames(
-    'palette-grouping__color',
-    {
-      'palette-grouping__color--contrast': contrast,
-      'palette-grouping__color--brand': brand,
-    },
-  );
-
-  return (
-    <div className={colorClasses} style={{ backgroundColor: hex }}>
-      <div>{variable}</div>
-      <div>{hex}</div>
-    </div>
-  );
-}
+import ColorBlock from './components/ColorBlock';
 
 storiesOf('Foundation', module)
   .add('Home', () => (
@@ -33,41 +15,41 @@ storiesOf('Foundation', module)
       <div className="pallete-grid u-my4">
 
         <div className="palette-grouping">
-          {renderColor('$black',    '#030102', true, true)}
-          {renderColor('$gray-500', '#292728', true)}
-          {renderColor('$gray-400', '#747374', true)}
-          {renderColor('$gray-300', '#a9a9a9', true)}
-          {renderColor('$gray-200', '#cfcfcf')}
-          {renderColor('$gray-100', '#f5f5f5')}
+          <ColorBlock variable="$black" hex="#030102" needsContrast isBrand />
+          <ColorBlock variable="$gray-500" hex="#292728" needsContrast />
+          <ColorBlock variable="$gray-400" hex="#747374" needsContrast />
+          <ColorBlock variable="$gray-300" hex="#a9a9a9" needsContrast />
+          <ColorBlock variable="$gray-200" hex="#cfcfcf" />
+          <ColorBlock variable="$gray-100" hex="#f5f5f5" />
         </div>
 
         <div className="palette-grouping">
-          {renderColor('$gold-300', '#d6a461', true, true)}
-          {renderColor('$gold-100', '#faf6ed', false, true)}
+          <ColorBlock variable="$gold-300" hex="#d6a461" needsContrast isBrand />
+          <ColorBlock variable="$gold-100" hex="#faf6ed" isBrand />
         </div>
 
         <div className="palette-grouping">
-          {renderColor('$teal-500', '#003a49', true)}
-          {renderColor('$teal-300', '#387483', true)}
-          {renderColor('$teal-100', '#a8d7dd', false, true)}
+          <ColorBlock variable="$teal-500" hex="#003a49" needsContrast />
+          <ColorBlock variable="$teal-300" hex="#387483" needsContrast />
+          <ColorBlock variable="$teal-100" hex="#a8d7dd" isBrand />
         </div>
 
         <div className="palette-grouping">
-          {renderColor('$green-500', '#364919', true)}
-          {renderColor('$green-300', '#718d50', true, true)}
-          {renderColor('$green-100', '#aebf94')}
+          <ColorBlock variable="$green-500" hex="#364919" needsContrast />
+          <ColorBlock variable="$green-300" hex="#718d50" needsContrast isBrand />
+          <ColorBlock variable="$green-100" hex="#aebf94" />
         </div>
 
         <div className="palette-grouping">
-          {renderColor('$yellow-500', '#856100', true)}
-          {renderColor('$yellow-300', '#edcb3a', false, true)}
-          {renderColor('$yellow-100', '#ffe473')}
+          <ColorBlock variable="$yellow-500" hex="#856100" needsContrast />
+          <ColorBlock variable="$yellow-300" hex="#edcb3a" isBrand />
+          <ColorBlock variable="$yellow-100" hex="#ffe473" />
         </div>
 
         <div className="palette-grouping">
-          {renderColor('$red-500', '#91271f', true)}
-          {renderColor('$red-300', '#e05d48', false, true)}
-          {renderColor('$red-100', '#ea9a92')}
+          <ColorBlock variable="$red-500" hex="#91271f" needsContrast />
+          <ColorBlock variable="$red-300" hex="#e05d48" isBrand />
+          <ColorBlock variable="$red-100" hex="#ea9a92" />
         </div>
 
       </div>

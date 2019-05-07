@@ -68,7 +68,8 @@
     "react-dom": ">=16.0.0"
   },
   "dependencies": {
-    "classnames": "^2.2.6"
+    "classnames": "^2.2.6",
+    "react-copy-to-clipboard": "^5.0.1"
   },
   "loki": {
     "configurations": {
