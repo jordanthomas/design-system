@@ -40,7 +40,7 @@
     "babel-loader": "^8.0.5",
     "concurrently": "^4.1.0",
     "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.12.1",
+    "enzyme-adapter-react-16": "^1.13.1",
     "flow-bin": "^0.98.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
