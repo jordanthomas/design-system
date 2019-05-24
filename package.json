@@ -44,7 +44,7 @@
     "flow-bin": "^0.98.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
-    "jest-cli": "^24.7.1",
+    "jest-cli": "^24.8.0",
     "jest-junit": "^6.4.0",
     "loki": "^0.15.0",
     "node-sass": "^4.12.0",
