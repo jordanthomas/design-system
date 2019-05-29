@@ -7474,10 +7474,10 @@ log-update@^2.3.0:
     cli-cursor "^2.0.0"
     wrap-ansi "^3.0.1"
 
-loki@^0.15.0:
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/loki/-/loki-0.15.0.tgz#33ac2a7454b5da1963e798580ee2d6aac2b82e98"
-  integrity sha512-6nEIBd39h8mU6bFXapac4pSYglEyXNUsC9Tgeae+3qX64zyqk6ch+UaGWif9sSAt8c28Uy6qYRk3+Rj8AwgJvg==
+loki@^0.16.0:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/loki/-/loki-0.16.0.tgz#96c6c4845b1cc439d678153337a2075c31baf842"
+  integrity sha512-o6bqtKL2rr/cMogB6b10wf0FfVxiQ3ENHn87NMrWKeqGDeCi7Ge02J6Tj/Moi1Y8TGyRz1KNcd9Jxm7yodJTfg==
   dependencies:
     chalk "^2.4.1"
     chrome-launcher "^0.10.5"
