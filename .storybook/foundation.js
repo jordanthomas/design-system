@@ -72,6 +72,7 @@ storiesOf('Foundation', module)
           <h3 className="u-mb2">H3: Aktiv</h3>
           <h4 className="u-mb2">H4: Bebas</h4>
           <h5 className="u-mb4">H5: Aktiv</h5>
+          <h6 className="u-mb4">h6: Aktiv</h6>
 
           <div className="u-mb4">
             <p className="body--large-bold">Body Large: Aktiv 600 18/25</p>
@@ -97,6 +98,8 @@ storiesOf('Foundation', module)
           <h2 className="u-mb2">H2: Bebas</h2>
           <h3 className="u-mb2">H3: Aktiv</h3>
           <h4 className="u-mb4">H4: Aktiv</h4>
+          <h5 className="u-mb4">H5: Aktiv</h5>
+          <h6 className="u-mb4">h6: Aktiv</h6>
 
           <div className="u-mb4">
             <p className="body--large-bold">Body Large: Aktiv 600 18/25</p>
