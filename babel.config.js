@@ -8,5 +8,8 @@ module.exports = {
     ['@babel/preset-react', {}],
     // strip out flow typings
     ['@babel/preset-flow', {}]
+  ],
+  plugins: [
+    "@babel/plugin-proposal-class-properties"
   ]
 };
