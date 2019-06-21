@@ -62,7 +62,7 @@
     "sass-lint": "^1.13.1",
     "sass-loader": "^7.1.0",
     "storybook-addon-jsx": "^7.1.2",
-    "storybook-readme": "^5.0.3"
+    "storybook-readme": "^5.0.5"
   },
   "peerDependencies": {
     "react": ">=16.0.0",
