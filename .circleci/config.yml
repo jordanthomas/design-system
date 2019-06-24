@@ -9,9 +9,9 @@ jobs:
       - image: circleci/node:10.11-stretch-browsers
     steps:
       # install microsoft fonts. (used in visual tests)
-      - apt install -y -qq software-properties-common
-      - apt-add-repository contrib && apt update
-      - apt install -y -qq ttf-mscorefonts-installer
+      - run: apt install -y -qq software-properties-common
+      - run: apt-add-repository contrib && apt update
+      - run: apt install -y -qq ttf-mscorefonts-installer
 
       - checkout
       - restore_cache:
