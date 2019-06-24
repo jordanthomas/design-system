@@ -6,7 +6,7 @@ version: 2
 jobs:
   test:
     docker:
-      - image: circleci/node:10.11-browsers
+      - image: circleci/node:10.11-stretch-browsers
     steps:
       - checkout
       - restore_cache:
@@ -43,7 +43,7 @@ jobs:
 
   publish:
     docker:
-      - image: circleci/node:10.11
+      - image: circleci/node:10.11-stretch
     steps:
       - checkout
       - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
