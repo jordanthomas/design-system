@@ -30,9 +30,11 @@ jobs:
       # build static storybook
       - run: yarn storybook:build
       # generate images from current state
-      - run: yarn loki:build-current-static
+      - run: yarn loki:build-current-static --configurationFilter ci
       # diff and generate report
+      - run: .circle/prepare_viz_tests_for_ci.sh
       - run: yarn test:visual
+
       - store_artifacts:
           path: .loki
       # store junit result files (js tests, sass lint)

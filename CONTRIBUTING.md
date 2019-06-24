@@ -8,9 +8,9 @@
 1. Use Prettier and SassLint linters
 1. Use Editorconfig
 1. Start the development watch process (`yarn dev`)
-    - Starts storybook server
-    - Rebuild distributable on changes
-    - Run Jest tests on changes
+   - Starts storybook server
+   - Rebuild distributable on changes
+   - Run Jest tests on changes
 1. Modify whatever you need
 
 If you want to work on this library while consuming it in another project you can use `yarn link` like so:
@@ -18,25 +18,25 @@ If you want to work on this library while consuming it in another project you ca
 1. Link this project `yarn link`
 1. Start development watch process `yarn dev`
 1. Use the link in your project `yarn link @ebth/design-system`
-    - Run this in your project's folder
-    - If you use Flowtype you may [lose typing hints](https://github.com/facebook/flow/issues/4015).
+   - Run this in your project's folder
+   - If you use Flowtype you may [lose typing hints](https://github.com/facebook/flow/issues/4015).
 
 ## Code style and linting
 
 We use a variety of linters for configuring your IDE/Editor and for each language. Below is a breakdown of the tools we use and what their purpose is:
 
--   Editorconfig: Configures your text editor or IDE to use the correct indendation and line ending settings
-    -   [How to configure for Atom](https://atom.io/packages/editorconfig)
-    -   [How to configure for VSCode](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
--   Prettier: Automatically fixes code style in JS and Markdown files
-    -   [How to configure for Atom](https://atom.io/packages/prettier-atom)
-    -   [How to configure for VSCode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
--   Sass Lint: Lints SCSS/SASS files to ensure code formatting
-    -   [How to configure for Atom](https://atom.io/packages/linter-sass-lint)
-    -   [How to configure for VSCode](https://marketplace.visualstudio.com/items?itemName=glen-84.sass-lint)
--   Flowtype: Not really a linter perse, but will ensure JS typings are correct
-    -   [How to configure for Atom](https://atom.io/packages/flow-ide)
-    -   [How to configure for VSCode](https://marketplace.visualstudio.com/items?itemName=flowtype.flow-for-vscode)
+- Editorconfig: Configures your text editor or IDE to use the correct indendation and line ending settings
+  - [How to configure for Atom](https://atom.io/packages/editorconfig)
+  - [How to configure for VSCode](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+- Prettier: Automatically fixes code style in JS and Markdown files
+  - [How to configure for Atom](https://atom.io/packages/prettier-atom)
+  - [How to configure for VSCode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- Sass Lint: Lints SCSS/SASS files to ensure code formatting
+  - [How to configure for Atom](https://atom.io/packages/linter-sass-lint)
+  - [How to configure for VSCode](https://marketplace.visualstudio.com/items?itemName=glen-84.sass-lint)
+- Flowtype: Not really a linter perse, but will ensure JS typings are correct
+  - [How to configure for Atom](https://atom.io/packages/flow-ide)
+  - [How to configure for VSCode](https://marketplace.visualstudio.com/items?itemName=flowtype.flow-for-vscode)
 
 ## Testing
 
@@ -57,30 +57,30 @@ The visual regression testing process operates something like the following:
 #### Running visual regression tests
 
 1. Start Storybook server or build Storybook docs
-    - Start development watch process: `yarn dev`
-    - or start server: `yarn storybook:watch`
-    - or build static site: `yarn storybook:build`
+   - Start development watch process: `yarn dev`
+   - or start server: `yarn storybook:watch`
+   - or build static site: `yarn storybook:build`
 1. Build the `current` state from Storybook:
-    - If using the Storybook server (or `yarn dev`): `yarn loki:build-current`
-    - If using a built storybook static site: `yarn loki:build-current-static`
+   - If using the Storybook server (or `yarn dev`): `yarn loki:build-current --configurationFilter local`
+   - If using a built storybook static site: `yarn loki:build-current-static --configurationFilter local`
 1. Compare the `current` to the `reference` state:
-    - `yarn test:visual`
+   - `yarn test:visual`
 
 #### Approving visual changes
 
 1. Run your visual regression tests (see steps above)
 1. Review diffs and ensure everything is looking correct
 1. Approve the changes
-    - `yarn loki:approve`
+   - `yarn loki:approve`
 
 #### Rebuilding reference images
 
 You shouldn't have to run these commands unless doing a substantial overhaul to the documentation or changing Loki configuration. In most cases simply approving the visual changes after running the tests is sufficient.
 
 1. Start Storybook server or build Storybook docs
-    - Start development watch process: `yarn dev`
-    - or start server: `yarn storybook:watch`
-    - or build static site: `yarn storybook:build`
+   - Start development watch process: `yarn dev`
+   - or start server: `yarn storybook:watch`
+   - or build static site: `yarn storybook:build`
 1. Generate `reference` images from the current Storybook state:
-    - If using the Storybook server (or `yarn dev`): `yarn loki:build-reference`
-    - If using a built storybook static site: `yarn loki:build-reference-static`
+   - If using the Storybook server (or `yarn dev`): `yarn loki:build-reference --configurationFilter local`
+   - If using a built storybook static site: `yarn loki:build-reference-static --configurationFilter local`
