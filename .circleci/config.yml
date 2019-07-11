@@ -85,7 +85,7 @@ workflows:
   dev-branch:
     jobs:
       - test
-      - test-visual
+      - visual-test
   tagged-build:
     jobs:
       - publish:
