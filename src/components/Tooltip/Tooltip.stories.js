@@ -14,7 +14,7 @@ setAddon(JSXAddon);
 storiesOf('Tooltip', module)
   .addDecorator(withReadme(TooltipREADME))
   .addWithJSX(
-    'styles',
+    'usage',
     () => (
       <div className="u-p8">
         <Tooltip content="Tooltip">
