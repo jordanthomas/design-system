@@ -69,6 +69,7 @@
     "react-dom": ">=16.0.0"
   },
   "dependencies": {
+    "@tippy.js/react": "^2.2.2",
     "classnames": "^2.2.6",
     "react-copy-to-clipboard": "^5.0.1"
   },
