@@ -6,7 +6,7 @@
 
 ```javascript
 import * as React from 'react';
-import { Tooltip } from '~/public/shared/components';
+import { Tooltip } from '@ebth/design-system';
 
 export default () => {
     return (
