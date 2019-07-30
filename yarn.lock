@@ -1718,6 +1718,14 @@
     "@svgr/plugin-svgo" "^4.2.0"
     loader-utils "^1.2.3"
 
+"@tippy.js/react@^2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@tippy.js/react/-/react-2.2.2.tgz#a0fbc646958cdb002d7d227f7b18dca346c76f2e"
+  integrity sha512-ex6IEy1cFC1a1MqbRaNZqo/MRK/GQOfa/VO5jydYeBrxnxJ3I/3gCX098dUHRLZmB6aFKVY39TwgnQRCbLUG4Q==
+  dependencies:
+    prop-types "^15.6.2"
+    tippy.js "^4.3.4"
+
 "@types/babel__core@^7.1.0":
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.1.tgz#ce9a9e5d92b7031421e1d0d74ae59f572ba48be6"
@@ -11817,6 +11825,13 @@ tiny-emitter@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/tiny-emitter/-/tiny-emitter-2.1.0.tgz#1d1a56edfc51c43e863cbb5382a72330e3555423"
   integrity sha512-NB6Dk1A9xgQPMoGqC5CVXn123gWyte215ONT5Pp5a0yt4nlEoO1ZWeCwpncaekPHXO60i47ihFnZPiRPjRMq4Q==
+
+tippy.js@^4.3.4:
+  version "4.3.4"
+  resolved "https://registry.yarnpkg.com/tippy.js/-/tippy.js-4.3.4.tgz#9a91fd5ce8c401f181b7adaa6b2c27f3d105f3ba"
+  integrity sha512-O2ukxHOJTLVYZ/TfHjNd8WgAWoefX9uk5QiWRdHfX2PR2lBpUU4BJQLl7U2Ykc8K7o16gTeHEElpuRfgD5b0aA==
+  dependencies:
+    popper.js "^1.14.7"
 
 tmp@^0.0.33:
   version "0.0.33"
