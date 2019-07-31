@@ -15,6 +15,38 @@ const bannerText = `/*!
   https://github.com/ebth/design-system
 */\n`;
 
+const svgPath = () => ({
+  name: 'svgPath',
+  load(id) {
+    if (extname(id) !== '.svg') {
+      return null;
+    }
+
+    const data = readFileSync(id, 'utf-8');
+
+    return new Promise((resolve, reject) =>
+      parseString(data, (err, result) => {
+        if (err) {
+          return reject(err);
+        }
+
+        const path = result.svg.path[0].$.d;
+        const code = `export default '${path}';`;
+        const ast = {
+          type: 'Program',
+          sourceType: 'module',
+          start: 0,
+          end: null,
+          body: [],
+        };
+
+        // Export as JS
+        return resolve({ ast, code, map: { mappings: '' } });
+      })
+    );
+  },
+});
+
 export default [
   {
     input: 'src/index.js',
@@ -55,7 +87,8 @@ export default [
       }),
       copy({
         targets: { 'src/stylesheets': 'dist' }
-      })
+      }),
+      svgPath()
     ],
     // TODO: just pull in from package.json peerDependencies and dependencies
     external: ['react', 'react-dom', 'classnames']
