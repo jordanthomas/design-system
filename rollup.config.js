@@ -4,6 +4,9 @@ import commonjs from 'rollup-plugin-commonjs';
 import flowEntry from 'rollup-plugin-flow-entry';
 import postcss from 'rollup-plugin-postcss';
 import copy from 'rollup-plugin-copy';
+import { readFileSync } from 'fs';
+import { extname } from 'path';
+import { parseString } from 'xml2js';
 // so this node-sass import actaully does nothing
 // but i'm leaving it in here as a reminder that, while we don't use it
 // directly... it is still needed for postcss to pickup sass files correctly

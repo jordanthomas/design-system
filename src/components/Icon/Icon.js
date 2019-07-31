@@ -38,9 +38,11 @@ const PureIcon: StatelessFunctionalComponent<Props> = ({
       aria-hidden={ariaHidden}
       aria-label={accessibilityLabel}
       role="img"
-      dangerouslySetInnerHTML={{ __html: path }} // eslint-disable-line react/no-danger
       ref={svgRef}
-    />
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d={path} />
+    </svg>
   );
 };
 

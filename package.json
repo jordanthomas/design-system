@@ -33,7 +33,6 @@
     "@babel/preset-react": "^7.0.0",
     "@storybook/addon-actions": "^5.1.9",
     "@storybook/addon-links": "^5.1.9",
-    "@storybook/addon-options": "^5.1.9",
     "@storybook/react": "^5.1.9",
     "@storybook/theming": "^5.0.11",
     "babel-jest": "^24.8.0",
@@ -71,7 +70,10 @@
   "dependencies": {
     "@tippy.js/react": "^2.2.2",
     "classnames": "^2.2.6",
-    "react-copy-to-clipboard": "^5.0.1"
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "react-copy-to-clipboard": "^5.0.1",
+    "xml2js": "^0.4.19"
   },
   "loki": {
     "configurations": {
