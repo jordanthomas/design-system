@@ -6,6 +6,7 @@ import './assets/stylesheets/storybook.scss';
 
 addParameters({
   options: {
+    panelPosition: 'right',
     theme: ebthTheme,
   },
 });
