@@ -1303,14 +1303,14 @@
     react-inspector "^3.0.2"
     uuid "^3.3.2"
 
-"@storybook/addon-links@^5.1.9":
-  version "5.1.9"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-5.1.9.tgz#944237bfb318cf4741b417d2b452b0b644650868"
-  integrity sha512-mwNxbXX9eI6G7iBk/1BJ2bSsLOv+/zek7BbF8x5LGTXgrp9bVB6dUxjPFHOmiUFqrLheHxUTsBlwZDFQdMdHBg==
+"@storybook/addon-links@^5.1.10":
+  version "5.1.10"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-5.1.10.tgz#bb9e6a30f1cddddabd755cfad689477d755ae804"
+  integrity sha512-LDDcIU4ae76063baWuoi7dWI8YeSCq595siUlxM+aNydxHsIdQhi7vH1GRJL1oqCvvYLykdopcjKofO5EiTVdw==
   dependencies:
-    "@storybook/addons" "5.1.9"
-    "@storybook/core-events" "5.1.9"
-    "@storybook/router" "5.1.9"
+    "@storybook/addons" "5.1.10"
+    "@storybook/core-events" "5.1.10"
+    "@storybook/router" "5.1.10"
     common-tags "^1.8.0"
     core-js "^3.0.1"
     global "^4.3.2"
@@ -1501,14 +1501,14 @@
     recompose "^0.30.0"
     simplebar-react "^1.0.0-alpha.6"
 
-"@storybook/core-events@5.1.10":
+"@storybook/core-events@5.1.10", "@storybook/core-events@^5.0.6":
   version "5.1.10"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-5.1.10.tgz#5aed88c572036b6bd6dfff28976ee96e6e175d7a"
   integrity sha512-Lvu/rNcgS+XCkQKSGdNpUSWjpFF9AOSHPXsvkwHbRwJYdMDn3FznlXfDUiubOWtsziXHB6vl3wkKDlH+ckb32Q==
   dependencies:
     core-js "^3.0.1"
 
-"@storybook/core-events@5.1.9", "@storybook/core-events@^5.0.6":
+"@storybook/core-events@5.1.9":
   version "5.1.9"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-5.1.9.tgz#441a6297e2ccfa743e15d1db1f4ac445b91f40d8"
   integrity sha512-jHe2uyoLj9i6fntHtOj5azfGdLOb75LF0e1xXE8U2SX7Zp3uwbLAcfJ+dPStdc/q+f/wBiip3tH1dIjaNuUiMw==
