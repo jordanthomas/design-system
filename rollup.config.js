@@ -96,6 +96,6 @@ export default [
       svgPath()
     ],
     // TODO: just pull in from package.json peerDependencies and dependencies
-    external: ['react', 'react-dom', 'classnames']
+    external: ['react', 'react-dom', 'classnames', '@tippy.js/react']
   }
 ];

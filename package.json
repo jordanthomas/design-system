@@ -63,14 +63,16 @@
     "sass-loader": "^7.1.0",
     "storybook-addon-jsx": "^7.1.5",
     "storybook-readme": "^5.0.5",
-    "xml2js": "^0.4.19"
+    "xml2js": "^0.4.19",
+    "@tippy.js/react": "^2.2.2"
   },
   "peerDependencies": {
     "react": ">=16.0.0",
-    "react-dom": ">=16.0.0"
+    "react-dom": ">=16.0.0",
+    "@tippy.js/react": "^2.2.2"
   },
   "dependencies": {
-    "@tippy.js/react": "^2.2.2",
+
     "classnames": "^2.2.6",
     "react-copy-to-clipboard": "^5.0.1"
   },
