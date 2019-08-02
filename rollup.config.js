@@ -1,13 +1,15 @@
+import { extname } from 'path';
+import { readFileSync } from 'fs';
+import { parseString } from 'xml2js';
+
 import babel from 'rollup-plugin-babel';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import flowEntry from 'rollup-plugin-flow-entry';
 import postcss from 'rollup-plugin-postcss';
 import copy from 'rollup-plugin-copy';
-import { readFileSync } from 'fs';
-import { extname } from 'path';
-import { parseString } from 'xml2js';
-// so this node-sass import actaully does nothing
+
+// so this node-sass import actually does nothing
 // but i'm leaving it in here as a reminder that, while we don't use it
 // directly... it is still needed for postcss to pickup sass files correctly
 import 'node-sass';
@@ -27,8 +29,8 @@ const svgPath = () => ({
 
     const data = readFileSync(id, 'utf-8');
 
-    return new Promise((resolve, reject) =>
-      parseString(data, (err, result) => {
+    return new Promise((resolve, reject) => {
+      return parseString(data, (err, result) => {
         if (err) {
           return reject(err);
         }
@@ -40,14 +42,14 @@ const svgPath = () => ({
           sourceType: 'module',
           start: 0,
           end: null,
-          body: [],
+          body: []
         };
 
         // Export as JS
         return resolve({ ast, code, map: { mappings: '' } });
-      })
-    );
-  },
+      });
+    });
+  }
 });
 
 export default [
@@ -94,6 +96,6 @@ export default [
       svgPath()
     ],
     // TODO: just pull in from package.json peerDependencies and dependencies
-    external: ['react', 'react-dom', 'classnames']
+    external: ['react', 'react-dom', 'classnames', '@tippy.js/react']
   }
 ];
