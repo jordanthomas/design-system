@@ -6,7 +6,7 @@
 
 ```javascript
 import * as React from 'react';
-import { Icon } from '~/public/shared/components';
+import { Icon } from '@ebth/design-system';
 
 export default () => {
     return (

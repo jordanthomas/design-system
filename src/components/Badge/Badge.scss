@@ -30,8 +30,23 @@
     background-color: $feedback-success;
   }
 
+  &--warning {
+    color: $yellow-500;
+    background-color: $yellow-100;
+  }
+
   &--negative {
     color: #fff;
     background-color: $feedback-error;
+  }
+
+  &__info-icon {
+    vertical-align: text-bottom;
+    margin-right: -0.25em;// visual adjustment for the circle within the round badge
+    margin-left: 0.4em;
+    width: 16px;
+    height: 16px;
+    cursor: default;
+    fill: currentColor;
   }
 }

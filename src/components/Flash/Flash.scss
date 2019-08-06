@@ -1,0 +1,44 @@
+@import '../../stylesheets/base';
+
+.flash {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  border-radius: $card-border-radius;
+  padding: 1rem;
+  color: $teal-500;
+  background-color: $teal-100;
+
+  &--success {
+    color: $green-500;
+    background-color: $green-100;
+  }
+
+  &--warn {
+    color: $yellow-500;
+    background-color: $yellow-100;
+  }
+
+  &--error {
+    color: $red-500;
+    background-color: $red-100;
+  }
+
+  &__icon {
+    display: block;
+    margin-right: 0.75rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: currentColor;
+  }
+
+  &__body {
+    @include as-body('small');
+    flex: 1;
+  }
+
+  &__heading {
+    @include as-body('small', 'bold');
+    margin: 0;
+  }
+}
