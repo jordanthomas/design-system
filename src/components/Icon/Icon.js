@@ -4,6 +4,8 @@ import React, { type StatelessFunctionalComponent, createRef } from 'react';
 import classNames from 'classnames';
 import svgs from './svgs';
 
+import { icons } from './icons';
+
 import './Icon.scss';
 
 type Props = {|
@@ -27,7 +29,7 @@ const PureIcon: StatelessFunctionalComponent<Props> = ({
   );
   const svgSize = size || 24;
   const ariaHidden = accessibilityLabel === '' ? true : null;
-  const path = svgs[icon];
+  const path = icons[icon];
 
   return (
     <svg
