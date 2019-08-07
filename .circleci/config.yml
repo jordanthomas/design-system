@@ -88,7 +88,7 @@ jobs:
       - image: circleci/node:10.11-stretch
     steps:
       - checkout
-      - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+      - run: echo "//npm.pkg.github.com/:_authToken=$NPM_TOKEN" >> ~/.npmrc
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "yarn.lock" }}
