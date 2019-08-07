@@ -7,7 +7,7 @@ import JSXAddon from 'storybook-addon-jsx';
 import { withReadme } from 'storybook-readme';
 
 import { Button } from './Button';
-import { Icon } from './Button';
+import { Icon } from '../Icon';
 
 import ButtonREADME from './README.md';
 
@@ -109,7 +109,7 @@ storiesOf('Button', module)
     'with icon',
     () => (
       <div className="u-p8">
-        <Button onClick={action('clicked')} buttonStyle="secondary" inFlight>
+        <Button onClick={action('clicked')} buttonStyle="secondary">
           <Icon icon="heart" className="btn__icon" />
           Button Text
         </Button>
