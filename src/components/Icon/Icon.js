@@ -2,8 +2,6 @@
 
 import React, { type StatelessFunctionalComponent, createRef } from 'react';
 import classNames from 'classnames';
-import svgs from './svgs';
-
 import { icons } from './icons';
 
 import './Icon.scss';
