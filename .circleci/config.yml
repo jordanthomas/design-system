@@ -106,6 +106,10 @@ workflows:
       - build
   release:
     jobs:
+      - test
+      - build:
+          requires:
+            - test
       - publish:
           requires:
             - build
