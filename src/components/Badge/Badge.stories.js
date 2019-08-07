@@ -37,17 +37,33 @@ storiesOf('Badge', module)
     'with info tooltip',
     () => (
       <div className="u-p8">
-        <Badge infoTooltip="This is the tooltip text" className="u-mr2">Badge Text</Badge>
-        <Badge status="neutral" infoTooltip="This is the tooltip text" className="u-mr2">
+        <Badge infoTooltip="This is the tooltip text" className="u-mr2">
           Badge Text
         </Badge>
-        <Badge status="positive" infoTooltip="This is the tooltip text" className="u-mr2">
+        <Badge
+          status="neutral"
+          infoTooltip="This is the tooltip text"
+          className="u-mr2"
+        >
           Badge Text
         </Badge>
-        <Badge status="warning" infoTooltip="This is the tooltip text" className="u-mr2">
+        <Badge
+          status="positive"
+          infoTooltip="This is the tooltip text"
+          className="u-mr2"
+        >
           Badge Text
         </Badge>
-        <Badge status="negative" infoTooltip="This is the tooltip text">Badge Text</Badge>
+        <Badge
+          status="warning"
+          infoTooltip="This is the tooltip text"
+          className="u-mr2"
+        >
+          Badge Text
+        </Badge>
+        <Badge status="negative" infoTooltip="This is the tooltip text">
+          Badge Text
+        </Badge>
       </div>
     ),
     { skip: 1 }

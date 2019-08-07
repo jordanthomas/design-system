@@ -35,7 +35,9 @@ storiesOf('Icon', module)
           >
             <span>
               <Icon icon={key} size={30} />
-              <div className="u-mt2"><pre className="u-m0">{key}</pre></div>
+              <div className="u-mt2">
+                <pre className="u-m0">{key}</pre>
+              </div>
             </span>
           </div>
         ))}
