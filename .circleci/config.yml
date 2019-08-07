@@ -80,7 +80,7 @@ jobs:
       # we'll persist the final distributable files for the publish step
       - persist_to_workspace:
           root: .
-          path:
+          paths:
             - dist
 
   publish:
