@@ -15,7 +15,7 @@ setAddon(JSXAddon);
 storiesOf('Icon', module)
   .addDecorator(withReadme(IconREADME))
   .addWithJSX(
-    'heart',
+    'all icon',
     () => (
       <div className="u-p8">
         {Object.keys(icons).map(key => (
