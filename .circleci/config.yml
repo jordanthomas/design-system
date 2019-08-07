@@ -79,7 +79,7 @@ jobs:
       - run: yarn dist:build
       # we'll persist the final distributable files for the publish step
       - persist_to_workspace:
-          root: .
+          root: ~/project
           path:
             - dist/*
 
@@ -93,7 +93,7 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "yarn.lock" }}
       - attach_workspace:
-          at: .
+          at: ~/project
       # TODO: uncomment out when ready to publish
       # - run: yarn publish
 
