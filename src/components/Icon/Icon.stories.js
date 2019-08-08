@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { storiesOf, setAddon } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 import JSXAddon from 'storybook-addon-jsx';
 import { withReadme } from 'storybook-readme';
 
