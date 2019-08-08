@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import ColorBlock from './components/ColorBlock';
 
-storiesOf('Foundation', module)
+storiesOf('Base|Foundation', module)
   .add('Home', () => (
     <div className="u-p8">
       <h1>EBTH Design System</h1>

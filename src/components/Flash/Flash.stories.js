@@ -9,7 +9,7 @@ import flashREADME from './README.md';
 
 setAddon(JSXAddon);
 
-storiesOf('Flash', module)
+storiesOf('Components|Flash', module)
   .addDecorator(withReadme(flashREADME))
   .addWithJSX(
     'styles',

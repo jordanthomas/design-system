@@ -12,7 +12,7 @@ import { icons } from './icons';
 
 setAddon(JSXAddon);
 
-storiesOf('Icon', module)
+storiesOf('Components|Icon', module)
   .addDecorator(withReadme(IconREADME))
   .addWithJSX(
     'all icons',

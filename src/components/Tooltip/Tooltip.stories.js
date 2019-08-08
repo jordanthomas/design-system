@@ -11,7 +11,7 @@ import TooltipREADME from './README.md';
 
 setAddon(JSXAddon);
 
-storiesOf('Tooltip', module)
+storiesOf('Components|Tooltip', module)
   .addDecorator(withReadme(TooltipREADME))
   .addWithJSX(
     'usage',

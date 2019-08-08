@@ -9,7 +9,7 @@ import { Button } from '../Button';
 
 setAddon(JSXAddon);
 
-storiesOf('Loading Dots', module)
+storiesOf('Components|Loading Dots', module)
   .addWithJSX(
     'stand alone',
     () => (

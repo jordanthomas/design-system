@@ -12,7 +12,7 @@ setAddon(JSXAddon);
 
 // storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
-storiesOf('Badge', module)
+storiesOf('Components|Badge', module)
   .addDecorator(withReadme(BadgeREADME))
   .addWithJSX(
     'status',
