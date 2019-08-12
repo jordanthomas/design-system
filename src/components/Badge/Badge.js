@@ -14,35 +14,25 @@ export const Badge: StatelessFunctionalComponent<{
   status?: BadgeStatus,
   children?: Node,
   className?: string,
-  infoTooltip?: Node | string,
-}> = ({
-  size,
-  status,
-  children,
-  className,
-  infoTooltip,
-  ...otherProps
-}) => {
+  infoTooltip?: Node | string
+}> = ({ size, status, children, className, infoTooltip, ...otherProps }) => {
   const badgeClasses = classNames(
     'badge',
     {
       [`badge--${size || ''}`]: !!size,
-      [`badge--${status || ''}`]: !!status,
+      [`badge--${status || ''}`]: !!status
     },
-    className,
+    className
   );
 
   return (
-    <span
-      className={badgeClasses}
-      {...otherProps}
-    >
+    <span className={badgeClasses} {...otherProps}>
       {children}
-      {infoTooltip &&
+      {infoTooltip && (
         <Tooltip content={infoTooltip}>
           <Icon icon="info" className="badge__info-icon" />
         </Tooltip>
-      }
+      )}
     </span>
   );
 };

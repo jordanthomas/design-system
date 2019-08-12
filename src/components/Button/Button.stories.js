@@ -62,7 +62,11 @@ storiesOf('Components|Button', module)
         </Button>
         <br />
         <br />
-        <Button onClick={action('clicked')} buttonStyle="primary-danger" className="u-mr2">
+        <Button
+          onClick={action('clicked')}
+          buttonStyle="primary-danger"
+          className="u-mr2"
+        >
           Primary Danger
         </Button>
         <Button onClick={action('clicked')} buttonStyle="secondary-danger">
@@ -139,13 +143,23 @@ storiesOf('Components|Button', module)
     'display',
     () => (
       <div className="u-p8">
-        <Button onClick={action('clicked')} buttonStyle="primary" buttonDisplay="icon-only" className="u-mr2">
+        <Button
+          onClick={action('clicked')}
+          buttonStyle="primary"
+          buttonDisplay="icon-only"
+          className="u-mr2"
+        >
           <Icon icon="heart" className="btn__icon" />
         </Button>
         Icon Only
         <br />
         <br />
-        <Button onClick={action('clicked')} buttonStyle="primary" buttonDisplay="icon-only-circle" className="u-mr2">
+        <Button
+          onClick={action('clicked')}
+          buttonStyle="primary"
+          buttonDisplay="icon-only-circle"
+          className="u-mr2"
+        >
           <Icon icon="heart" className="btn__icon" />
         </Button>
         Icon Only Circle
