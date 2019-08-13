@@ -1204,7 +1204,7 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@storybook/addon-actions@5.2.0-beta.29", "@storybook/addon-actions@^5.2.0-beta.24":
+"@storybook/addon-actions@5.2.0-beta.29", "@storybook/addon-actions@^5.2.0-beta.29":
   version "5.2.0-beta.29"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-5.2.0-beta.29.tgz#c3ced3d946e43ac60d3e4e2d7f515cf0912b4960"
   integrity sha512-CIg+ZCrfhT8L5c5SwvghyRLdBrZgZL7+zcxMwybyX4PuEbGYF31hVwYmiroowedk36S9oh5HkUnm0Oetu+VeiQ==
@@ -1224,7 +1224,7 @@
     react-inspector "^3.0.2"
     uuid "^3.3.2"
 
-"@storybook/addon-docs@^5.2.0-beta.24":
+"@storybook/addon-docs@^5.2.0-beta.29":
   version "5.2.0-beta.29"
   resolved "https://registry.yarnpkg.com/@storybook/addon-docs/-/addon-docs-5.2.0-beta.29.tgz#36244e2d607128b98058d1c9c8c07ff4366f83e3"
   integrity sha512-KdxiuG4FEiiJbKpLi4SUsqCEBN5JrtfH4YyXWgv5C+t3QPQiJUsO9YYgvvL/xB2XHI+OUZw8Y5BU4wprn/BTlw==
@@ -1270,7 +1270,7 @@
     react-lifecycles-compat "^3.0.4"
     react-select "^3.0.0"
 
-"@storybook/addon-links@^5.2.0-beta.24":
+"@storybook/addon-links@^5.2.0-beta.29":
   version "5.2.0-beta.29"
   resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-5.2.0-beta.29.tgz#791e3940c79e278e6b435d71e7cbbb860863b21c"
   integrity sha512-iG2OOQWnfr1dS2b2r/kORTs0ph06fBHzSpuH7FLM3R5OOjPscppmbKMoVqZ3sT7Bscv6y4amfzxlFdWA+4ePQQ==
@@ -1284,7 +1284,7 @@
     prop-types "^15.7.2"
     qs "^6.6.0"
 
-"@storybook/addon-storysource@^5.2.0-beta.24":
+"@storybook/addon-storysource@^5.2.0-beta.29":
   version "5.2.0-beta.29"
   resolved "https://registry.yarnpkg.com/@storybook/addon-storysource/-/addon-storysource-5.2.0-beta.29.tgz#f31b7dca78cd10d960e6c2fedfa05fe2c98faefa"
   integrity sha512-Th5TmbnOy6Bzct272joDreBEsG40GytY5GS/Xk2sBMOzGDPK644R89zu+0kJJXDWib7Oq0JWXGEnxAquANpY9Q==
@@ -1538,7 +1538,7 @@
     pretty-hrtime "^1.0.3"
     regenerator-runtime "^0.12.1"
 
-"@storybook/react@^5.2.0-beta.24":
+"@storybook/react@^5.2.0-beta.29":
   version "5.2.0-beta.29"
   resolved "https://registry.yarnpkg.com/@storybook/react/-/react-5.2.0-beta.29.tgz#5484de3ac8827afa3004daf854db1f8b7a58ba84"
   integrity sha512-ytDij0EztUvQoQrtEkfMnF57MUxCXk34PKzVzfBYFUxgooaLmi9YquzndXZ06y3d96Elc6Nds92mNawOuzHglg==
@@ -1610,7 +1610,7 @@
     prop-types "^15.7.2"
     resolve-from "^5.0.0"
 
-"@storybook/theming@5.2.0-beta.29", "@storybook/theming@^5.2.0-beta.24":
+"@storybook/theming@5.2.0-beta.29", "@storybook/theming@^5.2.0-beta.29":
   version "5.2.0-beta.29"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-5.2.0-beta.29.tgz#6be92152fdde88d3910188f9e21787a44c7bb34e"
   integrity sha512-o7cwoApJj8AMshKDul7dbfxgsvkNm4fQjIBGrXqtTp0q/AxFsSGAc58/9ZpXIS4DPs8j97aF4CuUxljxuPb6Uw==
