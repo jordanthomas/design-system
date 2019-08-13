@@ -4,6 +4,7 @@ import commonjs from 'rollup-plugin-commonjs';
 import flowEntry from 'rollup-plugin-flow-entry';
 import postcss from 'rollup-plugin-postcss';
 import copy from 'rollup-plugin-copy';
+import analyze from 'rollup-plugin-analyzer';
 
 // so this node-sass import actually does nothing
 // but i'm leaving it in here as a reminder that, while we don't use it
@@ -27,6 +28,7 @@ export default [
       banner: bannerText
     },
     plugins: [
+      analyze({ stdout: true }),
       // use the node method of resolving file imports. by default things
       // like importing folders with index.js will not work
       resolve(),

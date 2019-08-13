@@ -13,8 +13,74 @@ import ButtonREADME from './README.md';
 
 setAddon(JSXAddon);
 
-storiesOf('Button', module)
+storiesOf('Components|Button', module)
   .addDecorator(withReadme(ButtonREADME))
+  .addWithJSX(
+    'styles',
+    () => (
+      <div className="u-p8">
+        <Button
+          onClick={action('clicked')}
+          buttonStyle="primary"
+          className="u-mr2"
+        >
+          Primary
+        </Button>
+        <Button
+          onClick={action('clicked')}
+          buttonStyle="secondary"
+          className="u-mr2"
+        >
+          Secondary
+        </Button>
+        <br />
+        <br />
+        <Button
+          onClick={action('clicked')}
+          buttonStyle="primary-important"
+          className="u-mr2"
+        >
+          Primary Important
+        </Button>
+        <br />
+        <br />
+        <Button
+          onClick={action('clicked')}
+          buttonStyle="primary-contrast"
+          className="u-mr2"
+        >
+          Primary Contrast
+        </Button>
+        <br />
+        <br />
+        <Button
+          onClick={action('clicked')}
+          buttonStyle="primary-facebook"
+          className="u-mr2"
+        >
+          Primary Facebook
+        </Button>
+        <br />
+        <br />
+        <Button
+          onClick={action('clicked')}
+          buttonStyle="primary-danger"
+          className="u-mr2"
+        >
+          Primary Danger
+        </Button>
+        <Button onClick={action('clicked')} buttonStyle="secondary-danger">
+          Secondary Danger
+        </Button>
+        <br />
+        <br />
+        <Button onClick={action('clicked')} buttonStyle="navigation">
+          Navigation
+        </Button>
+      </div>
+    ),
+    { skip: 1 }
+  )
   .addWithJSX(
     'sizes',
     () => (
@@ -25,7 +91,7 @@ storiesOf('Button', module)
           buttonStyle="secondary"
           className="u-mr2"
         >
-          Button Text
+          Size - Extra Sm
         </Button>
         <Button
           onClick={action('clicked')}
@@ -33,14 +99,14 @@ storiesOf('Button', module)
           buttonStyle="secondary"
           className="u-mr2"
         >
-          Button Text
+          Size - Sm
         </Button>
         <Button
           onClick={action('clicked')}
           buttonStyle="secondary"
           className="u-mr2"
         >
-          Button Text
+          Normal
         </Button>
         <Button
           onClick={action('clicked')}
@@ -48,58 +114,14 @@ storiesOf('Button', module)
           buttonStyle="secondary"
           className="u-mr2"
         >
-          Button Text
+          Size - Lg
         </Button>
         <Button
           onClick={action('clicked')}
           buttonSize="xl"
           buttonStyle="secondary"
         >
-          Button Text
-        </Button>
-      </div>
-    ),
-    { skip: 1 }
-  )
-  .addWithJSX(
-    'styles',
-    () => (
-      <div className="u-p8">
-        <Button
-          onClick={action('clicked')}
-          buttonStyle="primary"
-          className="u-mr2"
-        >
-          Button Text
-        </Button>
-        <Button
-          onClick={action('clicked')}
-          buttonStyle="primary-important"
-          className="u-mr2"
-        >
-          Button Text
-        </Button>
-        <Button onClick={action('clicked')} buttonStyle="primary-danger">
-          Button Text
-        </Button>
-        <br />
-        <br />
-        <Button
-          onClick={action('clicked')}
-          buttonStyle="secondary"
-          className="u-mr2"
-        >
-          Button Text
-        </Button>
-        <Button
-          onClick={action('clicked')}
-          buttonStyle="secondary-important"
-          className="u-mr2"
-        >
-          Button Text
-        </Button>
-        <Button onClick={action('clicked')} buttonStyle="secondary-danger">
-          Button Text
+          Size Xl
         </Button>
       </div>
     ),
@@ -112,6 +134,43 @@ storiesOf('Button', module)
         <Button onClick={action('clicked')} buttonStyle="secondary">
           <Icon icon="heart" className="btn__icon" />
           Button Text
+        </Button>
+      </div>
+    ),
+    { skip: 1 }
+  )
+  .addWithJSX(
+    'display',
+    () => (
+      <div className="u-p8">
+        <Button
+          onClick={action('clicked')}
+          buttonStyle="primary"
+          buttonDisplay="icon-only"
+          className="u-mr2"
+        >
+          <Icon icon="heart" className="btn__icon" />
+        </Button>
+        Icon Only
+        <br />
+        <br />
+        <Button
+          onClick={action('clicked')}
+          buttonStyle="primary"
+          buttonDisplay="icon-only-circle"
+          className="u-mr2"
+        >
+          <Icon icon="heart" className="btn__icon" />
+        </Button>
+        Icon Only Circle
+        <br />
+        <br />
+        <Button
+          onClick={action('clicked')}
+          buttonStyle="secondary"
+          buttonDisplay="block"
+        >
+          Block
         </Button>
       </div>
     ),

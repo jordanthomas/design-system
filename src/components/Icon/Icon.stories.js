@@ -11,7 +11,7 @@ import { icons } from './icons';
 
 setAddon(JSXAddon);
 
-storiesOf('Icon', module)
+storiesOf('Components|Icon', module)
   .addDecorator(withReadme(IconREADME))
   .addWithJSX(
     'all icons',
@@ -34,7 +34,9 @@ storiesOf('Icon', module)
           >
             <span>
               <Icon icon={key} size={30} />
-              <div className="u-mt2"><pre className="u-m0">{key}</pre></div>
+              <div className="u-mt2">
+                <pre className="u-m0">{key}</pre>
+              </div>
             </span>
           </div>
         ))}

@@ -5,20 +5,21 @@ import JSXAddon from 'storybook-addon-jsx';
 import { withReadme } from 'storybook-readme';
 
 import { Tooltip } from './Tooltip';
-import { Badge } from '../Badge';
+import { Icon } from '../Icon';
 
 import TooltipREADME from './README.md';
 
 setAddon(JSXAddon);
 
-storiesOf('Tooltip', module)
+storiesOf('Components|Tooltip', module)
   .addDecorator(withReadme(TooltipREADME))
   .addWithJSX(
     'usage',
     () => (
       <div className="u-p8">
-        <Tooltip content="Tooltip">
-          <span>This text has a Tooltip</span>
+        This statement needs further explanation
+        <Tooltip content="Tooltip that gives an explanation">
+          <Icon icon="info" size="18" className="u-ml1 u-text-muted" />
         </Tooltip>
       </div>
     ),

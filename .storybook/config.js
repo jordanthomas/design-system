@@ -11,15 +11,13 @@ addParameters({
   },
 });
 
-// const req = require.context('../src/components', true, /\.stories\.js$/);
-// function loadStories() {
-//   // Home page
-//   require("./foundation");
-//   // automatically import all files ending in *.stories.js
-//   req.keys().forEach(filename => req(filename));
-//   require("./utility");
-// }
-//
-// configure(loadStories, module);
+const req = require.context('../src/components', true, /\.stories\.(js|ts|tsx|mdx)$/);
+function loadStories() {
+  // Home page
+  require("./foundation.stories");
+  // automatically import all files ending in *.stories.js
+  req.keys().forEach(filename => req(filename));
+  require("./utility.stories");
+}
 
-configure(require.context('../src/components', true, /\.stories\.(js|ts|tsx|mdx)$/), module);
+configure(loadStories, module);

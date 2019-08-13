@@ -11,20 +11,17 @@ type Props = {|
   className: string,
   icon: string,
   size: string,
-  svgRef?: any,
-|}
+  svgRef?: any
+|};
 
 const PureIcon: StatelessFunctionalComponent<Props> = ({
   accessibilityLabel,
   className,
   icon,
   size,
-  svgRef = createRef(),
+  svgRef = createRef()
 }) => {
-  const classes = classNames(
-    'icon',
-    className,
-  );
+  const classes = classNames('icon', className);
   const svgSize = size || 24;
   const ariaHidden = accessibilityLabel === '' ? true : null;
   const path = icons[icon];

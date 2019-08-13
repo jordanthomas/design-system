@@ -20,9 +20,9 @@ jobs:
 
       # ensure js files formatted correctly
       - run: yarn lint:js
-      # ensure not typing errors in js
+      # ensure no typing errors in js
       - run: yarn lint:flow
-      # ensure scss files formatte correctly
+      # ensure scss files formatted correctly
       - run: yarn lint:scss
       # run tests
       - run: yarn test
@@ -58,16 +58,15 @@ jobs:
       # diff and generate report
       - run: .circleci/prepare_viz_tests_for_ci.sh
       - run: yarn test:visual
-
+      # store the loki report for inspection
       - store_artifacts:
           path: .loki
 
-  publish:
+  build:
     docker:
       - image: circleci/node:10.11-stretch
     steps:
       - checkout
-      - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "yarn.lock" }}
@@ -76,19 +75,44 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "yarn.lock" }}
+      # build the final distributable files
       - run: yarn dist:build
+      # we'll persist the final distributable files for the publish step
+      - persist_to_workspace:
+          root: .
+          paths:
+            - dist
+
+  publish:
+    docker:
+      - image: circleci/node:10.11-stretch
+    steps:
+      - checkout
+      - run: echo "//npm.pkg.github.com/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "yarn.lock" }}
+      - attach_workspace:
+          at: .
       # TODO: uncomment out when ready to publish
       # - run: yarn publish
 
 workflows:
   version: 2
-  dev-branch:
+  dev-build:
     jobs:
       - test
       - visual-test
-  tagged-build:
+      - build
+  release:
     jobs:
+      - test
+      - build:
+          requires:
+            - test
       - publish:
+          requires:
+            - build
           filters:
             branches:
               ignore: /.*/

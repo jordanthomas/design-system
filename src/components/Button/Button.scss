@@ -151,10 +151,6 @@
     @include btn-secondary($teal-300);
   }
 
-  &--secondary-important {
-    @include btn-secondary($green-300);
-  }
-
   &--secondary-danger {
     @include btn-secondary($red-300);
   }
