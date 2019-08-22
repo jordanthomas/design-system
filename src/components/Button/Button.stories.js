@@ -1,24 +1,17 @@
 import React from 'react';
-
-import { storiesOf, setAddon } from '@storybook/react';
+import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import JSXAddon from 'storybook-addon-jsx';
-
 import { withReadme } from 'storybook-readme';
 
 import { Button } from './Button';
 import { Icon } from '../Icon';
-
 import ButtonREADME from './README.md';
-
-setAddon(JSXAddon);
 
 storiesOf('Components|Button', module)
   .addDecorator(withReadme(ButtonREADME))
-  .addWithJSX(
-    'styles',
+  .add('styles',
     () => (
-      <div className="u-p8">
+      <>
         <Button
           onClick={action('clicked')}
           buttonStyle="primary"
@@ -77,14 +70,12 @@ storiesOf('Components|Button', module)
         <Button onClick={action('clicked')} buttonStyle="navigation">
           Navigation
         </Button>
-      </div>
-    ),
-    { skip: 1 }
+      </>
+    )
   )
-  .addWithJSX(
-    'sizes',
+  .add('sizes',
     () => (
-      <div className="u-p8">
+      <>
         <Button
           onClick={action('clicked')}
           buttonSize="extra-sm"
@@ -123,26 +114,20 @@ storiesOf('Components|Button', module)
         >
           Size Xl
         </Button>
-      </div>
-    ),
-    { skip: 1 }
+      </>
+    )
   )
-  .addWithJSX(
-    'with icon',
+  .add('with icon',
     () => (
-      <div className="u-p8">
-        <Button onClick={action('clicked')} buttonStyle="secondary">
-          <Icon icon="heart" className="btn__icon" />
-          Button Text
-        </Button>
-      </div>
-    ),
-    { skip: 1 }
+      <Button onClick={action('clicked')} buttonStyle="secondary">
+        <Icon icon="heart" className="btn__icon" />
+        Button Text
+      </Button>
+    )
   )
-  .addWithJSX(
-    'display',
+  .add('display',
     () => (
-      <div className="u-p8">
+      <>
         <Button
           onClick={action('clicked')}
           buttonStyle="primary"
@@ -172,18 +157,13 @@ storiesOf('Components|Button', module)
         >
           Block
         </Button>
-      </div>
-    ),
-    { skip: 1 }
+      </>
+    )
   )
-  .addWithJSX(
-    'in flight',
+  .add('in flight',
     () => (
-      <div className="u-p8">
-        <Button onClick={action('clicked')} buttonStyle="secondary" inFlight>
-          Button Text
-        </Button>
-      </div>
-    ),
-    { skip: 1 }
+      <Button onClick={action('clicked')} buttonStyle="secondary" inFlight>
+        Button Text
+      </Button>
+    )
   );
