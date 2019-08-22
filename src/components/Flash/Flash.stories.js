@@ -7,10 +7,9 @@ import flashREADME from './README.md';
 
 storiesOf('Components|Flash', module)
   .addDecorator(withReadme(flashREADME))
-  .add(
-    'styles',
+  .add('styles',
     () => (
-      <div className="u-p8">
+      <>
         <Flash>This is a Flash message</Flash>
         <Flash flashStyle="warn" className="u-mt2">
           This is a Flash warning message
@@ -21,14 +20,12 @@ storiesOf('Components|Flash', module)
         <Flash flashStyle="success" className="u-mt2">
           This is a Flash success message
         </Flash>
-      </div>
-    ),
-    { skip: 1 }
+      </>
+    )
   )
-  .add(
-    'with heading',
+  .add('with heading',
     () => (
-      <div className="u-p8">
+      <>
         <Flash heading="Flash Heading">This is a Flash message</Flash>
         <Flash heading="Flash Heading" flashStyle="warn" className="u-mt2">
           This is a Flash warning message
@@ -39,14 +36,12 @@ storiesOf('Components|Flash', module)
         <Flash heading="Flash Heading" flashStyle="success" className="u-mt2">
           This is a Flash success message
         </Flash>
-      </div>
-    ),
-    { skip: 1 }
+      </>
+    )
   )
-  .add(
-    'with icon',
+  .add('with icon',
     () => (
-      <div className="u-p8">
+      <>
         <Flash showIcon>This is a Flash message with icon</Flash>
         <Flash showIcon flashStyle="warn" className="u-mt2">
           This is a Flash warning message with icon
@@ -57,14 +52,12 @@ storiesOf('Components|Flash', module)
         <Flash showIcon flashStyle="success" className="u-mt2">
           This is a Flash success message with icon
         </Flash>
-      </div>
-    ),
-    { skip: 1 }
+      </>
+    )
   )
-  .add(
-    'with heading + icon',
+  .add('with heading + icon',
     () => (
-      <div className="u-p8">
+      <>
         <Flash heading="Flash Heading" showIcon>
           This is a Flash message
         </Flash>
@@ -92,7 +85,6 @@ storiesOf('Components|Flash', module)
         >
           This is a Flash success message
         </Flash>
-      </div>
-    ),
-    { skip: 1 }
+      </>
+    )
   );

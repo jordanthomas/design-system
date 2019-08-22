@@ -9,10 +9,9 @@ import ButtonREADME from './README.md';
 
 storiesOf('Components|Button', module)
   .addDecorator(withReadme(ButtonREADME))
-  .add(
-    'styles',
+  .add('styles',
     () => (
-      <div className="u-p8">
+      <>
         <Button
           onClick={action('clicked')}
           buttonStyle="primary"
@@ -71,14 +70,12 @@ storiesOf('Components|Button', module)
         <Button onClick={action('clicked')} buttonStyle="navigation">
           Navigation
         </Button>
-      </div>
-    ),
-    { skip: 1 }
+      </>
+    )
   )
-  .add(
-    'sizes',
+  .add('sizes',
     () => (
-      <div className="u-p8">
+      <>
         <Button
           onClick={action('clicked')}
           buttonSize="extra-sm"
@@ -117,26 +114,20 @@ storiesOf('Components|Button', module)
         >
           Size Xl
         </Button>
-      </div>
-    ),
-    { skip: 1 }
+      </>
+    )
   )
-  .add(
-    'with icon',
+  .add('with icon',
     () => (
-      <div className="u-p8">
-        <Button onClick={action('clicked')} buttonStyle="secondary">
-          <Icon icon="heart" className="btn__icon" />
-          Button Text
-        </Button>
-      </div>
-    ),
-    { skip: 1 }
+      <Button onClick={action('clicked')} buttonStyle="secondary">
+        <Icon icon="heart" className="btn__icon" />
+        Button Text
+      </Button>
+    )
   )
-  .add(
-    'display',
+  .add('display',
     () => (
-      <div className="u-p8">
+      <>
         <Button
           onClick={action('clicked')}
           buttonStyle="primary"
@@ -166,18 +157,13 @@ storiesOf('Components|Button', module)
         >
           Block
         </Button>
-      </div>
-    ),
-    { skip: 1 }
+      </>
+    )
   )
-  .add(
-    'in flight',
+  .add('in flight',
     () => (
-      <div className="u-p8">
-        <Button onClick={action('clicked')} buttonStyle="secondary" inFlight>
-          Button Text
-        </Button>
-      </div>
-    ),
-    { skip: 1 }
+      <Button onClick={action('clicked')} buttonStyle="secondary" inFlight>
+        Button Text
+      </Button>
+    )
   );
