@@ -1,17 +1,13 @@
 import React from 'react';
-
-import { storiesOf, setAddon } from '@storybook/react';
-import JSXAddon from 'storybook-addon-jsx';
+import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
 
 import { Flash } from './Flash';
 import flashREADME from './README.md';
 
-setAddon(JSXAddon);
-
 storiesOf('Components|Flash', module)
   .addDecorator(withReadme(flashREADME))
-  .addWithJSX(
+  .add(
     'styles',
     () => (
       <div className="u-p8">
@@ -29,7 +25,7 @@ storiesOf('Components|Flash', module)
     ),
     { skip: 1 }
   )
-  .addWithJSX(
+  .add(
     'with heading',
     () => (
       <div className="u-p8">
@@ -47,7 +43,7 @@ storiesOf('Components|Flash', module)
     ),
     { skip: 1 }
   )
-  .addWithJSX(
+  .add(
     'with icon',
     () => (
       <div className="u-p8">
@@ -65,7 +61,7 @@ storiesOf('Components|Flash', module)
     ),
     { skip: 1 }
   )
-  .addWithJSX(
+  .add(
     'with heading + icon',
     () => (
       <div className="u-p8">

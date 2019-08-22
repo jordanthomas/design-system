@@ -1,16 +1,12 @@
 import React from 'react';
-
-import { storiesOf, setAddon } from '@storybook/react';
+import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import JSXAddon from 'storybook-addon-jsx';
 
 import { LoadingDots } from './LoadingDots';
 import { Button } from '../Button';
 
-setAddon(JSXAddon);
-
 storiesOf('Components|Loading Dots', module)
-  .addWithJSX(
+  .add(
     'stand alone',
     () => (
       <div className="u-p8">
@@ -22,7 +18,7 @@ storiesOf('Components|Loading Dots', module)
     ),
     { skip: 2 }
   )
-  .addWithJSX(
+  .add(
     'in flight button',
     () => (
       <div className="u-p8">

@@ -1,21 +1,15 @@
 import React from 'react';
-
-import { storiesOf, setAddon } from '@storybook/react';
+import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import JSXAddon from 'storybook-addon-jsx';
-
 import { withReadme } from 'storybook-readme';
 
 import { Button } from './Button';
 import { Icon } from '../Icon';
-
 import ButtonREADME from './README.md';
-
-setAddon(JSXAddon);
 
 storiesOf('Components|Button', module)
   .addDecorator(withReadme(ButtonREADME))
-  .addWithJSX(
+  .add(
     'styles',
     () => (
       <div className="u-p8">
@@ -81,7 +75,7 @@ storiesOf('Components|Button', module)
     ),
     { skip: 1 }
   )
-  .addWithJSX(
+  .add(
     'sizes',
     () => (
       <div className="u-p8">
@@ -127,7 +121,7 @@ storiesOf('Components|Button', module)
     ),
     { skip: 1 }
   )
-  .addWithJSX(
+  .add(
     'with icon',
     () => (
       <div className="u-p8">
@@ -139,7 +133,7 @@ storiesOf('Components|Button', module)
     ),
     { skip: 1 }
   )
-  .addWithJSX(
+  .add(
     'display',
     () => (
       <div className="u-p8">
@@ -176,7 +170,7 @@ storiesOf('Components|Button', module)
     ),
     { skip: 1 }
   )
-  .addWithJSX(
+  .add(
     'in flight',
     () => (
       <div className="u-p8">

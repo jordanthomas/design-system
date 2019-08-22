@@ -1,19 +1,14 @@
 import React from 'react';
-
-import { storiesOf, setAddon } from '@storybook/react';
-import JSXAddon from 'storybook-addon-jsx';
+import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
 
 import { Icon } from './Icon';
 import IconREADME from './README.md';
-
 import { icons } from './icons';
-
-setAddon(JSXAddon);
 
 storiesOf('Components|Icon', module)
   .addDecorator(withReadme(IconREADME))
-  .addWithJSX(
+  .add(
     'all icons',
     () => (
       <div className="u-p8">
