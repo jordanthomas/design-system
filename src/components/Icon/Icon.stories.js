@@ -8,8 +8,8 @@ import { icons } from './icons';
 
 storiesOf('Components|Icon', module)
   .addDecorator(withReadme(IconREADME))
-  .add('all icons',
-    () => Object.keys(icons).map(key => (
+  .add('all icons', () =>
+    Object.keys(icons).map(key => (
       <div
         key={key}
         className="u-pull-left u-mr1 u-mb1 u-text-center"

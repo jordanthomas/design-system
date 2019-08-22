@@ -8,13 +8,11 @@ import TooltipREADME from './README.md';
 
 storiesOf('Components|Tooltip', module)
   .addDecorator(withReadme(TooltipREADME))
-  .add('usage',
-    () => (
-      <>
-        This statement needs further explanation
-        <Tooltip content="Tooltip that gives an explanation">
-          <Icon icon="info" size="18" className="u-ml1 u-text-muted" />
-        </Tooltip>
-      </>
-    )
-  );
+  .add('usage', () => (
+    <>
+      This statement needs further explanation
+      <Tooltip content="Tooltip that gives an explanation">
+        <Icon icon="info" size="18" className="u-ml1 u-text-muted" />
+      </Tooltip>
+    </>
+  ));
