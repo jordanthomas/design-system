@@ -2,7 +2,8 @@
 
 import React, { type StatelessFunctionalComponent, type Node } from 'react';
 import classNames from 'classnames';
-import { Tooltip, Icon } from '../../../src';
+import { Icon } from '../Icon';
+import { Tooltip } from '../Tooltip';
 import './Badge.scss';
 
 type BadgeSize = 'mini';
