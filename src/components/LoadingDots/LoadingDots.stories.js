@@ -6,6 +6,7 @@ import { LoadingDots } from './LoadingDots';
 import { Button } from '../Button';
 
 storiesOf('Components|Loading Dots', module)
+  .addParameters({ component: LoadingDots })
   .add('stand alone', () => (
     <h3>
       <LoadingDots className="u-mr2" />
