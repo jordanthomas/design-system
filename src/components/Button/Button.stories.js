@@ -8,6 +8,7 @@ import { Icon } from '../Icon';
 import ButtonREADME from './README.md';
 
 storiesOf('Components|Button', module)
+  .addParameters({ component: Button })
   .addDecorator(withReadme(ButtonREADME))
   .add('styles', () => (
     <>

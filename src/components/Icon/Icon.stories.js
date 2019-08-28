@@ -7,6 +7,7 @@ import IconREADME from './README.md';
 import { icons } from './icons';
 
 storiesOf('Components|Icon', module)
+  .addParameters({ component: Icon })
   .addDecorator(withReadme(IconREADME))
   .add('all icons', () =>
     Object.keys(icons).map(key => (

@@ -7,6 +7,7 @@ import { Icon } from '../Icon';
 import TooltipREADME from './README.md';
 
 storiesOf('Components|Tooltip', module)
+  .addParameters({ component: Tooltip })
   .addDecorator(withReadme(TooltipREADME))
   .add('usage', () => (
     <>
