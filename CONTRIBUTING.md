@@ -4,9 +4,7 @@
 
 1. Fork or clone this repo
 1. Install dependencies (`yarn install`)
-1. Use Flowtype
-1. Use Prettier and SassLint linters
-1. Use Editorconfig
+1. Use Flowtype, Prettier, SassLint, and Editorconfig
 1. Start the development watch process (`yarn dev`)
     - Starts storybook server
     - Rebuild distributable on changes

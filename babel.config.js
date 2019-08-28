@@ -6,7 +6,9 @@ module.exports = {
     ['@babel/preset-env', {}],
     // convert jsx to js
     ['@babel/preset-react', {}],
-    // strip out flow typings
+    // strip out ts typings for TS/TSX
+    ['@babel/preset-typescript', {}],
+    // strip out flow typings for @flow files
     ['@babel/preset-flow', {}]
   ],
   plugins: [

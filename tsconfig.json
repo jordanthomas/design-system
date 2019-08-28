@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["es6", "dom", "esnext.asynciterable"],
+    "target": "es2015",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "baseUrl": "src",
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/**/*",
+  ],
+  "exclude": [
+    "dist",
+    "node_modules",
+  ],
+  "compileOnSave": false
+}

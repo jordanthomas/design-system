@@ -18,16 +18,17 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "yarn.lock" }}
 
-      # ensure js files formatted correctly
-      - run: yarn lint:js
-      # ensure no typing errors in js
+      # ensure js/ts files formatted correctly
+      - run: yarn lint:prettier
+      # ensure no typing errors in js/ts
       - run: yarn lint:flow
+      - run: yarn lint:ts
       # ensure scss files formatted correctly
       - run: yarn lint:scss
       # run tests
       - run: yarn test
 
-      # store junit result files (js tests, sass lint)
+      # store junit result files (jest tests, sass lint)
       - store_test_results:
           path: reports
 

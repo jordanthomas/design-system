@@ -1,7 +1,5 @@
 import babel from 'rollup-plugin-babel';
 import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
-import flowEntry from 'rollup-plugin-flow-entry';
 import postcss from 'rollup-plugin-postcss';
 import copy from 'rollup-plugin-copy';
 import analyze from 'rollup-plugin-analyzer';
@@ -17,23 +15,22 @@ const bannerText = `/*!
   https://github.com/ebth/design-system
 */\n`;
 
+const jsExtensions = ['.js', '.jsx', '.ts', '.tsx'];
+
 export default [
   {
-    input: 'src/index.js',
+    input: 'src/index.ts',
     output: {
       file: 'dist/index.js',
-      format: 'esm',
+      format: 'es',
       exports: 'named',
       sourcemap: true,
       banner: bannerText
     },
     plugins: [
       analyze({ stdout: true }),
-      // use the node method of resolving file imports. by default things
-      // like importing folders with index.js will not work
-      resolve(),
-      commonjs({
-        include: 'node_modules/**'
+      resolve({
+        extensions: jsExtensions
       }),
       postcss({
         sourceMap: true,
@@ -50,14 +47,16 @@ export default [
       }),
       // export flow typings.. this is actually really lazy
       // since our code is in flow, flow will just reference the raw source
-      flowEntry({ mode: 'strict-local' }),
+      // flowEntry({ mode: 'strict-local' }),
       // use babel to transform our source files
       babel({
         // pick up the shared babel.config.js/.bablerc file for config
-        babelrc: true
+        babelrc: true,
+        extensions: jsExtensions
       }),
       copy({
-        targets: { 'src/stylesheets': 'dist' }
+        targets: [{ src: 'src/stylesheets', dest: 'dist' }],
+        verbose: true
       })
     ],
     // TODO: just pull in from package.json peerDependencies and dependencies

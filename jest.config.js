@@ -1,6 +1,6 @@
 module.exports = {
   clearMocks: true,
-  setupFiles: ['<rootDir>/testSetup.js'],
+  setupFiles: ['<rootDir>/testSetup.ts'],
   reporters: [
     'default',
     [
@@ -13,8 +13,11 @@ module.exports = {
     ]
   ],
   rootDir: 'src',
-  collectCoverageFrom: ['**/*.{js,jsx}', '!**/node_modules/**'],
+  collectCoverageFrom: ['**/*.{js,jsx,ts,tsx}', '!**/node_modules/**'],
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
+  },
+  transform: {
+    '^.+\\.[t|j]sx?$': 'babel-jest'
   }
 };
