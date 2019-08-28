@@ -1,13 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withReadme } from 'storybook-readme';
-
 import { Badge } from './Badge';
-import BadgeREADME from './README.md';
 
 storiesOf('Components|Badge', module)
   .addParameters({ component: Badge })
-  .addDecorator(withReadme(BadgeREADME))
   .add('status', () => (
     <>
       <Badge className="u-mr2">Badge Text</Badge>
