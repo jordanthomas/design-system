@@ -17,12 +17,12 @@ type ButtonStyle =
   | 'primary-important'
   | 'primary-contrast'
   | 'primary-danger'
-  | 'primary-light'
   | 'secondary'
   | 'secondary-important'
   | 'secondary-danger'
+  | 'text'
+  | 'text-navigation'
   | 'link'
-  | 'navigation';
 
 export const Button: StatelessFunctionalComponent<{
   buttonDisplay?: ButtonDisplay,
