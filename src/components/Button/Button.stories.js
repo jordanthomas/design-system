@@ -26,6 +26,13 @@ storiesOf('Components|Button', module)
       >
         Secondary
       </Button>
+      <Button
+        onClick={action('clicked')}
+        buttonStyle="text"
+        className="u-mr2"
+      >
+        Text
+      </Button>
       <br />
       <br />
       <Button
@@ -67,8 +74,8 @@ storiesOf('Components|Button', module)
       </Button>
       <br />
       <br />
-      <Button onClick={action('clicked')} buttonStyle="navigation">
-        Navigation
+      <Button onClick={action('clicked')} buttonStyle="text-navigation">
+        Text Navigation
       </Button>
     </>
   ))
@@ -110,21 +117,43 @@ storiesOf('Components|Button', module)
         buttonSize="xl"
         buttonStyle="secondary"
       >
-        Size Xl
+        Size -  Xl
       </Button>
     </>
   ))
   .add('with icon', () => (
-    <Button onClick={action('clicked')} buttonStyle="secondary">
-      <Icon icon="heart" className="btn__icon" />
-      Button Text
-    </Button>
+    <>
+      <Button onClick={action('clicked')} buttonStyle="secondary" className="u-mr2">
+        <Icon icon="heart" className="btn__icon" />
+        Button Text
+      </Button>
+      <Button onClick={action('clicked')} buttonStyle="secondary">
+        Button Text
+        <Icon icon="heart" className="btn__icon btn__icon--right" />
+      </Button>
+    </>
   ))
   .add('display', () => (
     <>
       <Button
         onClick={action('clicked')}
         buttonStyle="primary"
+        buttonDisplay="icon-only"
+        className="u-mr2"
+      >
+        <Icon icon="heart" className="btn__icon" />
+      </Button>
+      <Button
+        onClick={action('clicked')}
+        buttonStyle="secondary"
+        buttonDisplay="icon-only"
+        className="u-mr2"
+      >
+        <Icon icon="heart" className="btn__icon" />
+      </Button>
+      <Button
+        onClick={action('clicked')}
+        buttonStyle="text"
         buttonDisplay="icon-only"
         className="u-mr2"
       >
@@ -141,16 +170,55 @@ storiesOf('Components|Button', module)
       >
         <Icon icon="heart" className="btn__icon" />
       </Button>
+      <Button
+        onClick={action('clicked')}
+        buttonStyle="secondary"
+        buttonDisplay="icon-only-circle"
+        className="u-mr2"
+      >
+        <Icon icon="heart" className="btn__icon" />
+      </Button>
+      <Button
+        onClick={action('clicked')}
+        buttonStyle="text"
+        buttonDisplay="icon-only-circle"
+        className="u-mr2"
+      >
+        <Icon icon="heart" className="btn__icon" />
+      </Button>
       Icon Only Circle
       <br />
       <br />
       <Button
         onClick={action('clicked')}
-        buttonStyle="secondary"
+        buttonStyle="primary"
         buttonDisplay="block"
       >
         Block
       </Button>
+      <Button
+        onClick={action('clicked')}
+        buttonStyle="secondary"
+        buttonDisplay="block"
+        className="u-mt2"
+      >
+        Block
+      </Button>
+      <Button
+        onClick={action('clicked')}
+        buttonStyle="text"
+        buttonDisplay="block"
+        className="u-mt2"
+      >
+        Block
+      </Button>
+      <br />
+      <p>A button can also be <Button
+        onClick={action('clicked')}
+        buttonDisplay="link"
+      >
+        an inline link
+      </Button>.</p>
     </>
   ))
   .add('in flight', () => (

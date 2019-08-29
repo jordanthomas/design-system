@@ -1,5 +1,12 @@
 @import '../../stylesheets/base';
 
+@mixin get-body-font-size($size) {
+  font-size: map-deep-get($as-element, 'body', $size, 'style', 'font-size');
+}
+
+@mixin get-header-font-size($size) {
+  font-size: map-deep-get($as-element, 'headers', 'default', $size, 'style', 'font-size');
+}
 
 @mixin btn-focus-shadow($color) {
   &:focus {
@@ -10,7 +17,7 @@
   }
 }
 
-@mixin btn-primary($color, $color-hover) {
+@mixin btn-contained($color, $color-hover) {
   border-color: $color;
   color: #fff;
   background: $color;
@@ -28,7 +35,7 @@
   @include btn-focus-shadow($color);
 }
 
-@mixin btn-secondary($color) {
+@mixin btn-outlined($color) {
   border-color: $color;
   color: $color;
 
@@ -44,6 +51,24 @@
   @include btn-focus-shadow($color);
 }
 
+@mixin btn-text($color, $color-hover) {
+  border-color: transparent;
+  color: $color;
+  background: transparent;
+
+  &:hover,
+  &:focus {
+
+    &:not([disabled]) {
+      border-color: $gray-100;
+      color: $link-color;
+      background: $gray-100;
+    }
+  }
+
+  @include btn-focus-shadow($link-color);
+}
+
 .btn {
   $b: &;
 
@@ -55,8 +80,9 @@
   border-radius: $btn-border-radius;
   padding: 0.55em 1em;
   user-select: none;
-  color: $text-color;
+  color: $link-color;
   background: transparent;
+  line-height: 1.5em;
   text-align: center;
   text-decoration: none;
   transition-timing-function: $btn-hover-timing-function;
@@ -78,15 +104,22 @@
     }
   }
 
+  // Button Display
+  //////////////////////////////////////////////////////////////////////////////
   &--link {
+    display: inline;
+    vertical-align: inherit;
     border: 0;
     padding: 0;
     color: $link-color;
+    font: inherit;
+    letter-spacing: inherit;
     text-decoration: underline;
+    transition: none;
 
     &:hover,
     &:focus {
-      color: $text-color;
+      color: $link-hover-color;
       background-color: transparent;
     }
   }
@@ -102,100 +135,67 @@
 
   &--icon-only-circle {
     border-radius: 50%;
-    width: 2em;
-    height: 2em;
-    padding: 0;
-    line-height: 2em;
-    text-align: center;
+    padding: 0.55em;
   }
 
+  // Button Size
+  //////////////////////////////////////////////////////////////////////////////
   &--extra-sm {
-    @include as-body('micro', 'bold');
+    @include get-body-font-size('micro');
   }
 
   &--sm {
-    @include as-body('small', 'bold');
+    @include get-body-font-size('small');
   }
 
   &--lg {
-    @include as-body('large', 'bold');
+    @include get-body-font-size('large');
   }
 
   &--xl {
-    @include as-header('h5');
+    @include get-header-font-size('h5');
   }
 
+  // Button Style
+  //////////////////////////////////////////////////////////////////////////////
   &--primary,
   &--following {
-    @include btn-primary($teal-300, $teal-500);
+    @include btn-contained($link-color, $link-hover-color);
   }
 
   &--primary-important {
-    @include btn-primary($green-300, $green-500);
+    @include btn-contained($green-300, $green-500);
   }
 
   &--primary-contrast {
-    @include btn-primary($gold-300, $yellow-500);
+    @include btn-contained($gold-300, $yellow-500);
   }
 
   &--primary-danger {
-    @include btn-primary($red-300, $red-500);
+    @include btn-contained($red-300, $red-500);
   }
 
   &--primary-facebook {
-    @include btn-primary($social-facebook, darken($social-facebook, 10%));
+    @include btn-contained($social-facebook, darken($social-facebook, 10%));
   }
 
   &--secondary,
   &--follow {
-    @include btn-secondary($teal-300);
+    @include btn-outlined($teal-300);
   }
 
   &--secondary-danger {
-    @include btn-secondary($red-300);
+    @include btn-outlined($red-300);
   }
 
-  // "light" buttons are only used in the header so their styles slightly detour
-  // from the standard patterns. Further overrides in header.scss
-  &--primary-light {
-    @include btn-primary($gold-100, $gold-300);
+  &--text {
+    @include btn-text($link-color, rgba($link-color, 0.5));
   }
 
-  &--secondary-light {
-    @include btn-secondary($gold-100);
-  }
-
-  &--primary-light,
-  &--secondary-light {
-    color: $gray-400;
-
-    &:hover,
-    &:focus {
-
-      &:not([disabled]) {
-        color: $gray-500;
-      }
-    }
-  }
-
-  // Only to be used for global header navigation
-  &--navigation {
-    border-color: transparent;
+  &--text-navigation {
+    @include btn-text($text-color, $link-color);
     padding-right: 0.5em;
     padding-left: 0.5em;
-    background: transparent;
-
-    &:hover,
-    &:focus {
-
-      &:not([disabled]) {
-        border-color: $gray-100;
-        color: $link-color;
-        background: $gray-100;
-      }
-    }
-
-    @include btn-focus-shadow($link-color);
   }
 
   &--following {
@@ -215,21 +215,10 @@
     }
   }
 
-  // "Ghost" buttons when combined w/ secondary modifier
-  &--borderless {
-    border-color: transparent;
-
-    &:hover,
-    &:focus {
-
-      &:not([disabled]) {
-        border-color: transparent;
-      }
-    }
-  }
-
+  // Button Icon
+  //////////////////////////////////////////////////////////////////////////////
   &__icon {
-    $dims: 1.3em;
+    $dims: 1.5em;
     $fix: 0.2em;// arbitrary visual adjustment (shifts icon upward)
     $offset: 0 - ($dims / 2);
     $spacing: 0.3em;
