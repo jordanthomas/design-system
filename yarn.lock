@@ -1806,13 +1806,28 @@
     prop-types "^15.7.2"
     regenerator-runtime "^0.12.1"
 
-"@storybook/source-loader@5.2.0-beta.46", "@storybook/source-loader@^5.2.0-beta.45":
+"@storybook/source-loader@5.2.0-beta.46":
   version "5.2.0-beta.46"
   resolved "https://registry.yarnpkg.com/@storybook/source-loader/-/source-loader-5.2.0-beta.46.tgz#0fbcee4c087662a0c804e4ec76de612d7a0e352c"
   integrity sha512-xOCgN/hL4dx3aUgycmm8BEmUp/DFraIFtCd2E0abmHlKHEp3eWetozipG6Kkz3GOF3D+zKujn4lYvz8TZDcnBQ==
   dependencies:
     "@storybook/addons" "5.2.0-beta.46"
     "@storybook/router" "5.2.0-beta.46"
+    core-js "^3.0.1"
+    estraverse "^4.2.0"
+    global "^4.3.2"
+    loader-utils "^1.2.3"
+    prettier "^1.16.4"
+    prop-types "^15.7.2"
+    regenerator-runtime "^0.12.1"
+
+"@storybook/source-loader@^5.2.0-rc.0":
+  version "5.2.0-rc.0"
+  resolved "https://registry.yarnpkg.com/@storybook/source-loader/-/source-loader-5.2.0-rc.0.tgz#96a3401c320510d2665650a28c234677a1eac285"
+  integrity sha512-v/1c0Zrv8APaFYJtd8bx9/Ub4n902sqoOTFL0SCV+r3RGdONbNm5QIxEJFUv5InL0aIfg3fdtHp1Khk3pXnWiQ==
+  dependencies:
+    "@storybook/addons" "5.2.0-rc.0"
+    "@storybook/router" "5.2.0-rc.0"
     core-js "^3.0.1"
     estraverse "^4.2.0"
     global "^4.3.2"
