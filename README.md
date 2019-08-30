@@ -10,12 +10,10 @@ UI Component library and style helper mixins for SCSS.
 
 1. Install library
 
-    ```bash
-    // with npm
-    npm install @ebth/design-system
+    **This package is not published on NPM or privately (yet), so install as a GitHub repo for now**
 
-    // with yarn
-    yarn add @ebth/design-system
+    ```bash
+    yarn add git@github.com:ebth/design-system.git/master
     ```
 
 1. Import components
@@ -24,11 +22,11 @@ UI Component library and style helper mixins for SCSS.
     import * as React from 'react';
     import { Button } from '@ebth/design-system';
 
-    interface IProps {
+    type Props = {
         label: string;
     }
 
-    export const MyButton: React.SFC<IProps> = ({ label }) => (
+    export const MyButton: React.FC<Props> = ({ label }) => (
         <Button>{label}</Button>
     );
     ```
@@ -59,11 +57,11 @@ UI Component library and style helper mixins for SCSS.
     import * as React from 'react';
     import { Button } from '@ebth/design-system';
 
-    interface IProps {
+    type Props = {
         label: string;
     }
 
-    export const MyButton: React.SFC<IProps> = ({ label }) => (
+    export const MyButton: React.FC<Props> = ({ label }) => (
         <Button className="my-button">{label}</Button>
     );
     ```
