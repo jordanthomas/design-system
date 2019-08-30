@@ -1,15 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { withReadme } from 'storybook-readme';
 
 import { Button } from './Button';
 import { Icon } from '../Icon';
-import ButtonREADME from './README.md';
 
 storiesOf('Components|Button', module)
   .addParameters({ component: Button })
-  .addDecorator(withReadme(ButtonREADME))
   .add('styles', () => (
     <>
       <Button
@@ -26,11 +23,7 @@ storiesOf('Components|Button', module)
       >
         Secondary
       </Button>
-      <Button
-        onClick={action('clicked')}
-        buttonStyle="text"
-        className="u-mr2"
-      >
+      <Button onClick={action('clicked')} buttonStyle="text" className="u-mr2">
         Text
       </Button>
       <br />
@@ -117,13 +110,17 @@ storiesOf('Components|Button', module)
         buttonSize="xl"
         buttonStyle="secondary"
       >
-        Size -  Xl
+        Size - Xl
       </Button>
     </>
   ))
   .add('with icon', () => (
     <>
-      <Button onClick={action('clicked')} buttonStyle="secondary" className="u-mr2">
+      <Button
+        onClick={action('clicked')}
+        buttonStyle="secondary"
+        className="u-mr2"
+      >
         <Icon icon="heart" className="btn__icon" />
         Button Text
       </Button>
@@ -213,12 +210,13 @@ storiesOf('Components|Button', module)
         Block
       </Button>
       <br />
-      <p>A button can also be <Button
-        onClick={action('clicked')}
-        buttonDisplay="link"
-      >
-        an inline link
-      </Button>.</p>
+      <p>
+        A button can also be{' '}
+        <Button onClick={action('clicked')} buttonDisplay="link">
+          an inline link
+        </Button>
+        .
+      </p>
     </>
   ))
   .add('in flight', () => (

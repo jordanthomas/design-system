@@ -1,6 +1,4 @@
-// @flow
-
-import React, { Component } from 'react';
+import * as React from 'react';
 import classNames from 'classnames';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
@@ -15,7 +13,7 @@ type State = {
   copied: boolean,
 }
 
-class ColorBlock extends Component<Props, State> {
+class ColorBlock extends React.Component<Props, State> {
   state = {
     copied: false,
   }

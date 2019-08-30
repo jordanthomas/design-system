@@ -1,26 +1,28 @@
-// @flow
-
-import React, { type StatelessFunctionalComponent, type Node } from 'react';
+import * as React from 'react';
 import classNames from 'classnames';
 
 import './Flash.scss';
 
 import { Icon } from '../Icon';
 
-type FlashStyle = 'warn' | 'error' | 'success';
+type Props = {
+  flashStyle?: 'warn' | 'error' | 'success';
+  heading?: string;
+  showIcon?: boolean;
+};
 
-export const Flash: StatelessFunctionalComponent<{
-  flashStyle?: FlashStyle,
-  children?: Node,
-  className?: string,
-  heading?: string,
-  showIcon?: boolean
-}> = ({
+type FullProps = Props &
+  Pick<
+    React.DetailedHTMLProps<React.HTMLProps<HTMLDivElement>, HTMLDivElement>,
+    'className'
+  >;
+
+export const Flash: React.FC<FullProps> = ({
   flashStyle,
   children,
   className,
   heading,
-  showIcon = false,
+  showIcon,
   ...otherProps
 }) => {
   const wrapperClasses = classNames(
@@ -49,4 +51,8 @@ export const Flash: StatelessFunctionalComponent<{
       </div>
     </div>
   );
+};
+
+Flash.defaultProps = {
+  showIcon: false
 };

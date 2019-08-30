@@ -1,13 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withReadme } from 'storybook-readme';
 
 import { Flash } from './Flash';
-import flashREADME from './README.md';
 
 storiesOf('Components|Flash', module)
   .addParameters({ component: Flash })
-  .addDecorator(withReadme(flashREADME))
   .add('styles', () => (
     <>
       <Flash>This is a Flash message</Flash>

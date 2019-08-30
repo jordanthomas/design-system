@@ -23,7 +23,7 @@ describe('<Badge />', () => {
     });
 
     it('renders the badge with the provided size class', () => {
-      const wrapper = shallow(<Badge size="mini">Sheriff</Badge>);
+      const wrapper = shallow(<Badge badgeSize="mini">Sheriff</Badge>);
       expect(wrapper.prop('className')).toEqual('badge badge--mini');
     });
 
@@ -31,7 +31,7 @@ describe('<Badge />', () => {
       const wrapper = shallow(
         <Badge
           status="negative"
-          size="mini"
+          badgeSize="mini"
           className="another-class and-another"
         >
           Sheriff
