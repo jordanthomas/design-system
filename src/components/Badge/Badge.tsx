@@ -6,20 +6,20 @@ import { Tooltip } from '../Tooltip';
 
 import './Badge.scss';
 
-type BadgeSize = 'mini';
-
-type BadgeStatus = 'neutral' | 'positive' | 'warning' | 'negative';
-
 type Props = {
-  size?: BadgeSize;
-  status?: BadgeStatus;
-  children?: React.ReactNode;
-  className?: string;
-  infoTooltip?: React.ReactNode;
+  badgeSize?: 'mini';
+  status?: 'neutral' | 'positive' | 'warning' | 'negative';
+  infoTooltip?: React.ReactChild;
 };
 
-export const Badge: React.FC<Props> = ({
-  size,
+type FullProps = Props &
+  Pick<
+    React.DetailedHTMLProps<React.HTMLProps<HTMLSpanElement>, HTMLSpanElement>,
+    'className'
+  >;
+
+export const Badge: React.FC<FullProps> = ({
+  badgeSize,
   status,
   children,
   className,
@@ -29,7 +29,7 @@ export const Badge: React.FC<Props> = ({
   const badgeClasses = classNames(
     'badge',
     {
-      [`badge--${size || ''}`]: !!size,
+      [`badge--${badgeSize || ''}`]: !!badgeSize,
       [`badge--${status || ''}`]: !!status
     },
     className

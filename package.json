@@ -81,7 +81,6 @@
     "rollup-plugin-postcss": "^2.0.3",
     "sass-lint": "^1.13.1",
     "sass-loader": "^7.3.1",
-    "storybook-readme": "^5.0.8",
     "ts-loader": "^6.0.4",
     "typescript": "^3.5.3"
   },

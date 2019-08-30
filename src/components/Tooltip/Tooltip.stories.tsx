@@ -1,14 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withReadme } from 'storybook-readme';
 
 import { Tooltip } from './Tooltip';
 import { Icon } from '../Icon';
-import TooltipREADME from './README.md';
 
 storiesOf('Components|Tooltip', module)
   .addParameters({ component: Tooltip })
-  .addDecorator(withReadme(TooltipREADME))
   .add('usage', () => (
     <>
       This statement needs further explanation
