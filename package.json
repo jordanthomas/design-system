@@ -82,7 +82,7 @@
     "sass-lint": "^1.13.1",
     "sass-loader": "^7.3.1",
     "ts-loader": "^6.0.4",
-    "typescript": "^3.5.3"
+    "typescript": "^3.6.2"
   },
   "peerDependencies": {
     "@tippy.js/react": "^2.2.3",
