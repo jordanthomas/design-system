@@ -6,18 +6,18 @@ import './assets/stylesheets/storybook.scss';
 
 addParameters({
   options: {
+    showPanel: false,
     panelPosition: 'right',
-    theme: ebthTheme,
-  },
+    selectedPanel: 'docs',
+    theme: ebthTheme
+  }
 });
 
-const req = require.context('../src/components', true, /\.stories\.(js|ts|tsx|mdx)$/);
-function loadStories() {
-  // Home page
-  require("./foundation.stories");
-  // automatically import all files ending in *.stories.js
-  req.keys().forEach(filename => req(filename));
-  require("./utility.stories");
-}
-
-configure(loadStories, module);
+configure(
+  [
+    require.context('./', false, /intro\.stories\.mdx/),
+    require.context('./', false, /foundation\.stories\.mdx/),
+    require.context('../src/components', true, /\.stories\.(js|ts|tsx|mdx)$/)
+  ],
+  module
+);
