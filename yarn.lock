@@ -1840,7 +1840,7 @@
     prop-types "^15.7.2"
     resolve-from "^5.0.0"
 
-"@storybook/theming@5.2.0-rc.0", "@storybook/theming@^5.2.0-beta.45":
+"@storybook/theming@5.2.0-rc.0":
   version "5.2.0-rc.0"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-5.2.0-rc.0.tgz#5cf9514df50a8ac278ef08aa58118ffd88e8648b"
   integrity sha512-3jPagUjo48syb2QSgqEmQA8IoCoJC6QgIqQTuCjjSYYVVrdtrx5bmxU0i7kKwWfPiTcvUUzaN6+TjJbdQMqUPw==
@@ -1858,7 +1858,7 @@
     prop-types "^15.7.2"
     resolve-from "^5.0.0"
 
-"@storybook/theming@5.2.0-rc.2":
+"@storybook/theming@5.2.0-rc.2", "@storybook/theming@^5.2.0-rc.2":
   version "5.2.0-rc.2"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-5.2.0-rc.2.tgz#65185ded3098e4b4cd519e4b0d1c07fc5ec676c8"
   integrity sha512-IKq6WheOiUEJxGQJ8sKLg4utOwCgUe9FK9CyCeV5L+t7mVLBFeBy+uJhKv2aeQ8pl195cJ6fe6WP64DfcboclQ==
