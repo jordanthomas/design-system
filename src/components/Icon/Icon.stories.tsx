@@ -1,5 +1,4 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 
 import { Icon } from './Icon';
 import { icons } from './icons';
@@ -35,6 +34,13 @@ const IconGrid: React.FC = () => {
   return <div>{iconGrid}</div>;
 };
 
-storiesOf('Components|Icon', module)
-  .addParameters({ component: Icon })
-  .add('all icons', () => <IconGrid />);
+export default {
+  title: 'Components|Icon',
+  component: Icon
+};
+
+export const allIcons = () => <IconGrid />;
+
+allIcons.story = {
+  name: 'all icons'
+};
