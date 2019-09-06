@@ -1264,10 +1264,10 @@
     react-inspector "^3.0.2"
     uuid "^3.3.2"
 
-"@storybook/addon-docs@^5.2.0-rc.4":
-  version "5.2.0-rc.4"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-docs/-/addon-docs-5.2.0-rc.4.tgz#ff61b923eabe63f0d5dc475340ca6b1ec78a881e"
-  integrity sha512-WpxgLs2ENVauoYKe926Y2aS/hIS4Q4yfFOvUnaaa8g7W+dHSr/NP50qcyxgtmfRc9Z1t3wUwhMeNgAjVkcgOPQ==
+"@storybook/addon-docs@^5.2.0-rc.6":
+  version "5.2.0-rc.6"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-docs/-/addon-docs-5.2.0-rc.6.tgz#966b18a75a82344b41e865d8af28c9fd886012b8"
+  integrity sha512-QIoSrIhsNoL4EdhKDu22GVBoxfQIt55cUPAiBjRR6gr+vZ9vpoSgmTAPs2pI5QfXynle11QzHSF42ZMVbnI86w==
   dependencies:
     "@babel/generator" "^7.4.0"
     "@babel/parser" "^7.4.2"
@@ -1275,12 +1275,12 @@
     "@mdx-js/loader" "^1.1.0"
     "@mdx-js/mdx" "^1.1.0"
     "@mdx-js/react" "^1.0.27"
-    "@storybook/addons" "5.2.0-rc.4"
-    "@storybook/api" "5.2.0-rc.4"
-    "@storybook/components" "5.2.0-rc.4"
-    "@storybook/router" "5.2.0-rc.4"
-    "@storybook/source-loader" "5.2.0-rc.4"
-    "@storybook/theming" "5.2.0-rc.4"
+    "@storybook/addons" "5.2.0-rc.6"
+    "@storybook/api" "5.2.0-rc.6"
+    "@storybook/components" "5.2.0-rc.6"
+    "@storybook/router" "5.2.0-rc.6"
+    "@storybook/source-loader" "5.2.0-rc.6"
+    "@storybook/theming" "5.2.0-rc.6"
     core-js "^3.0.1"
     global "^4.3.2"
     js-string-escape "^1.0.1"
@@ -1329,19 +1329,6 @@
     regenerator-runtime "^0.12.1"
     util-deprecate "^1.0.2"
 
-"@storybook/addons@5.2.0-rc.4":
-  version "5.2.0-rc.4"
-  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-5.2.0-rc.4.tgz#4973bb9213b48a84720b4a6d2405c37000e85638"
-  integrity sha512-LK40zqriBM2nujQy10snD2dAV+0yMAExLy9bV4C+Zi+zoLbJZwbX/bHcVSiB2AH2cMOgU77NGcChUN+ipv0Now==
-  dependencies:
-    "@storybook/api" "5.2.0-rc.4"
-    "@storybook/channels" "5.2.0-rc.4"
-    "@storybook/client-logger" "5.2.0-rc.4"
-    "@storybook/core-events" "5.2.0-rc.4"
-    core-js "^3.0.1"
-    global "^4.3.2"
-    util-deprecate "^1.0.2"
-
 "@storybook/addons@5.2.0-rc.5":
   version "5.2.0-rc.5"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-5.2.0-rc.5.tgz#f1a29b9a4b083015c2d7f59c2ff326ea86e5a0da"
@@ -1366,29 +1353,6 @@
     "@storybook/core-events" "5.2.0-rc.6"
     core-js "^3.0.1"
     global "^4.3.2"
-    util-deprecate "^1.0.2"
-
-"@storybook/api@5.2.0-rc.4":
-  version "5.2.0-rc.4"
-  resolved "https://registry.yarnpkg.com/@storybook/api/-/api-5.2.0-rc.4.tgz#179109c4e55dc7b0424f74d287da22c5e05e2866"
-  integrity sha512-oA82vq26julX+uEMzGmFIXO9BmUlAJRWYsXRQ432i11h77MPuxLu9tkahHARtyLS/e6C29KawGSD8Du69layyQ==
-  dependencies:
-    "@storybook/channels" "5.2.0-rc.4"
-    "@storybook/client-logger" "5.2.0-rc.4"
-    "@storybook/core-events" "5.2.0-rc.4"
-    "@storybook/router" "5.2.0-rc.4"
-    "@storybook/theming" "5.2.0-rc.4"
-    core-js "^3.0.1"
-    fast-deep-equal "^2.0.1"
-    global "^4.3.2"
-    lodash "^4.17.11"
-    memoizerific "^1.11.3"
-    prop-types "^15.6.2"
-    react "^16.8.3"
-    semver "^6.0.0"
-    shallow-equal "^1.1.0"
-    store2 "^2.7.1"
-    telejson "^2.2.2"
     util-deprecate "^1.0.2"
 
 "@storybook/api@5.2.0-rc.5":
@@ -1459,13 +1423,6 @@
     global "^4.3.2"
     telejson "^2.2.2"
 
-"@storybook/channels@5.2.0-rc.4":
-  version "5.2.0-rc.4"
-  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-5.2.0-rc.4.tgz#4239154331f9c04e3162d5c810acf7f5af3796a3"
-  integrity sha512-FovBK10FWCn4J7dqjFgWlQjwbjaxrMAtp0PIRceZqguPPsDx+qV3iyFuvNx/SrWWVODMmrU5SfLysiBmn3l1pw==
-  dependencies:
-    core-js "^3.0.1"
-
 "@storybook/channels@5.2.0-rc.5":
   version "5.2.0-rc.5"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-5.2.0-rc.5.tgz#a172550704f43f1a355de270194084a35bd71a20"
@@ -1522,13 +1479,6 @@
     qs "^6.6.0"
     util-deprecate "^1.0.2"
 
-"@storybook/client-logger@5.2.0-rc.4":
-  version "5.2.0-rc.4"
-  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-5.2.0-rc.4.tgz#870ded9e3089742833937d08f513e1a07e844e90"
-  integrity sha512-5IyicZV79T4GURymxe3ovBmjv3yk9ZlQ8wD2pP0kbytTJZ9T6/gECpxbRRsA6sNnF4Qxr1OXtQJNpHuLHAbhZw==
-  dependencies:
-    core-js "^3.0.1"
-
 "@storybook/client-logger@5.2.0-rc.5":
   version "5.2.0-rc.5"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-5.2.0-rc.5.tgz#f6e6e904d3cbe28c460ec3f0057af0760c97874b"
@@ -1542,30 +1492,6 @@
   integrity sha512-aQtjIkfW9V3oJpjQ7p1Bq5QC/HL4pJIVx5PcZNYCu++tOdHZHRlFR5tfbPLJsScASYvbQOmNQDhtrAhWpMmkfw==
   dependencies:
     core-js "^3.0.1"
-
-"@storybook/components@5.2.0-rc.4":
-  version "5.2.0-rc.4"
-  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-5.2.0-rc.4.tgz#3171c7236509a4de9365404bc535199fb899fe08"
-  integrity sha512-P/FR1NmAqE1Lj01n5uLrM1MhLozeb2LAQFhDQN6hrJyUUO4aUZfvbBLzOmYL9WvrTaqPOXaSOjfBK43o/kNV7A==
-  dependencies:
-    "@storybook/client-logger" "5.2.0-rc.4"
-    "@storybook/theming" "5.2.0-rc.4"
-    "@types/react-syntax-highlighter" "10.1.0"
-    core-js "^3.0.1"
-    global "^4.3.2"
-    markdown-to-jsx "^6.9.1"
-    memoizerific "^1.11.3"
-    polished "^3.3.1"
-    popper.js "^1.14.7"
-    prop-types "^15.7.2"
-    react "^16.8.3"
-    react-dom "^16.8.3"
-    react-focus-lock "^1.18.3"
-    react-helmet-async "^1.0.2"
-    react-popper-tooltip "^2.8.3"
-    react-syntax-highlighter "^8.0.1"
-    react-textarea-autosize "^7.1.0"
-    simplebar-react "^1.0.0-alpha.6"
 
 "@storybook/components@5.2.0-rc.5":
   version "5.2.0-rc.5"
@@ -1614,13 +1540,6 @@
     react-syntax-highlighter "^8.0.1"
     react-textarea-autosize "^7.1.0"
     simplebar-react "^1.0.0-alpha.6"
-
-"@storybook/core-events@5.2.0-rc.4":
-  version "5.2.0-rc.4"
-  resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-5.2.0-rc.4.tgz#a41506a3b4e016f88c97adf15fbd7ea2d99953dd"
-  integrity sha512-E25qTNU5zg456eRRzxkgZ97RrqtFgmrteIMgmxzmfSn9GQVY+FnV8T1nGwB/xZAvFxAxm0pbIHcJGsPlQUYqBw==
-  dependencies:
-    core-js "^3.0.1"
 
 "@storybook/core-events@5.2.0-rc.5":
   version "5.2.0-rc.5"
@@ -1753,19 +1672,6 @@
     semver "^6.0.0"
     webpack "^4.33.0"
 
-"@storybook/router@5.2.0-rc.4":
-  version "5.2.0-rc.4"
-  resolved "https://registry.yarnpkg.com/@storybook/router/-/router-5.2.0-rc.4.tgz#9dbd3b5542065dcec918cebe1d9fdef567b0c95a"
-  integrity sha512-SyenQH74Z7KZ/4h3t9Q3cDg3/lY5PWETP2NobHSdE61H++D4YDrcM6g/UpFa+ekYC/KxbPzqTqwVp6T6+RTzcg==
-  dependencies:
-    "@reach/router" "^1.2.1"
-    "@types/reach__router" "^1.2.3"
-    core-js "^3.0.1"
-    global "^4.3.2"
-    lodash "^4.17.11"
-    memoizerific "^1.11.3"
-    qs "^6.6.0"
-
 "@storybook/router@5.2.0-rc.5":
   version "5.2.0-rc.5"
   resolved "https://registry.yarnpkg.com/@storybook/router/-/router-5.2.0-rc.5.tgz#73864c2116755786bdf694d73d5e1c0577fa3251"
@@ -1792,21 +1698,6 @@
     memoizerific "^1.11.3"
     qs "^6.6.0"
 
-"@storybook/source-loader@5.2.0-rc.4":
-  version "5.2.0-rc.4"
-  resolved "https://registry.yarnpkg.com/@storybook/source-loader/-/source-loader-5.2.0-rc.4.tgz#1bbd92b6992578f30ae71411ef2b58f1b0abeef8"
-  integrity sha512-GsHbFIan2bW/7ZPjd5q5WSIJkpWRTkkcZE4mFJWk+8jl3iBTPzt7CTwj9om5jC0rU2q4tv2ZQOcDDWZ5MLNGrw==
-  dependencies:
-    "@storybook/addons" "5.2.0-rc.4"
-    "@storybook/router" "5.2.0-rc.4"
-    core-js "^3.0.1"
-    estraverse "^4.2.0"
-    global "^4.3.2"
-    loader-utils "^1.2.3"
-    prettier "^1.16.4"
-    prop-types "^15.7.2"
-    regenerator-runtime "^0.12.1"
-
 "@storybook/source-loader@5.2.0-rc.5":
   version "5.2.0-rc.5"
   resolved "https://registry.yarnpkg.com/@storybook/source-loader/-/source-loader-5.2.0-rc.5.tgz#5c4aa91557abe684115fedb4bc853d93f6a97f14"
@@ -1822,7 +1713,7 @@
     prop-types "^15.7.2"
     regenerator-runtime "^0.12.1"
 
-"@storybook/source-loader@^5.2.0-rc.6":
+"@storybook/source-loader@5.2.0-rc.6", "@storybook/source-loader@^5.2.0-rc.6":
   version "5.2.0-rc.6"
   resolved "https://registry.yarnpkg.com/@storybook/source-loader/-/source-loader-5.2.0-rc.6.tgz#0c896fb66a408e4e92fd000a5cb1ca82716bc56d"
   integrity sha512-NBMsT7jNjvzjc2eOR28FKH2ETTZ3CzqueENrxQfoo32OdNrEiT13/TO2xfMGguZe1IGhZFnpUw1Vtbe5279Faw==
@@ -1836,24 +1727,6 @@
     prettier "^1.16.4"
     prop-types "^15.7.2"
     regenerator-runtime "^0.12.1"
-
-"@storybook/theming@5.2.0-rc.4":
-  version "5.2.0-rc.4"
-  resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-5.2.0-rc.4.tgz#9fa504a7fed98a496936ed1b4ce9fe09c2b7749f"
-  integrity sha512-L9NWyvtL3lBymomIAJWTIu6Nlk+O9s1Tj89xJkWqHKcxb860sPlX/sbCadhAdtYpKYRD+CofHBbGLkC58JMNZg==
-  dependencies:
-    "@emotion/core" "^10.0.14"
-    "@emotion/styled" "^10.0.14"
-    "@storybook/client-logger" "5.2.0-rc.4"
-    common-tags "^1.8.0"
-    core-js "^3.0.1"
-    deep-object-diff "^1.1.0"
-    emotion-theming "^10.0.14"
-    global "^4.3.2"
-    memoizerific "^1.11.3"
-    polished "^3.3.1"
-    prop-types "^15.7.2"
-    resolve-from "^5.0.0"
 
 "@storybook/theming@5.2.0-rc.5":
   version "5.2.0-rc.5"
