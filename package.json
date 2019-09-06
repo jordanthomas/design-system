@@ -47,7 +47,7 @@
     "@storybook/addon-storysource": "^5.2.0-rc.5",
     "@storybook/preset-typescript": "^1.1.0",
     "@storybook/react": "^5.2.0-rc.5",
-    "@storybook/source-loader": "^5.2.0-rc.0",
+    "@storybook/source-loader": "^5.2.0-rc.6",
     "@storybook/theming": "^5.2.0-rc.5",
     "@tippy.js/react": "^2.2.3",
     "@types/classnames": "^2.2.9",
