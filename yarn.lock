@@ -1380,7 +1380,7 @@
     react-inspector "^3.0.2"
     uuid "^3.3.2"
 
-"@storybook/addon-docs@^5.2.0-rc.5":
+"@storybook/addon-docs@^5.2.0-rc.6":
   version "5.2.0-rc.9"
   resolved "https://registry.yarnpkg.com/@storybook/addon-docs/-/addon-docs-5.2.0-rc.9.tgz#1549cc649458b2fbdb68e2379b67b6ab231fe1a5"
   integrity sha512-egIi7GAdRdZbfwI0M3zZf3TzizqyMMMqfri05YqS6/d0TE5gWpBy5IcDZL7T1imtVtS44K1HBtaxL9KakL4m1A==
@@ -1426,7 +1426,7 @@
     react-lifecycles-compat "^3.0.4"
     react-select "^3.0.0"
 
-"@storybook/addon-storysource@^5.2.0-rc.5":
+"@storybook/addon-storysource@^5.2.0-rc.6":
   version "5.2.0-rc.9"
   resolved "https://registry.yarnpkg.com/@storybook/addon-storysource/-/addon-storysource-5.2.0-rc.9.tgz#396e43537668e379080ffaff2f09503154e3ac21"
   integrity sha512-h1ttySYzrr04dQMc69PmWLShhhAW9nobXAuW4LmH7o1oDHfa/vhdCARvJQHEpC7Ah1RQMeaYzU7nngRGNthqWQ==
@@ -1648,7 +1648,7 @@
   resolved "https://registry.yarnpkg.com/@storybook/preset-typescript/-/preset-typescript-1.1.0.tgz#59821cee902d4c1bcda07e0276c958c495d330e4"
   integrity sha512-V4Acf3XGzCFZQuX+91IL8LUbOC0Hs5/ZDZeo6YsuF6vTCIfzuX18PDw7Ph/0xJyL9yE45m8Fr7RA+c7JIwql1g==
 
-"@storybook/react@^5.2.0-rc.5":
+"@storybook/react@^5.2.0-rc.6":
   version "5.2.0-rc.9"
   resolved "https://registry.yarnpkg.com/@storybook/react/-/react-5.2.0-rc.9.tgz#f8c6b154fbbc75f3949be679c73d82bf5b497ecb"
   integrity sha512-oBkwW3Prk3O8o+txwfaSkZp8rD7zsOkJIJT0Edou5o4CF8Dcq0srX2zyN4QrSo4uBOjWLpSGfcNSxBpH68oX0g==
@@ -1688,7 +1688,7 @@
     memoizerific "^1.11.3"
     qs "^6.6.0"
 
-"@storybook/source-loader@5.2.0-rc.9", "@storybook/source-loader@^5.2.0-rc.0":
+"@storybook/source-loader@5.2.0-rc.9", "@storybook/source-loader@^5.2.0-rc.6":
   version "5.2.0-rc.9"
   resolved "https://registry.yarnpkg.com/@storybook/source-loader/-/source-loader-5.2.0-rc.9.tgz#77ccecee565c9cb7098ecd7c04b67fa20087bef5"
   integrity sha512-9jqFUhPwAxRB9mmwcjhT2o6n25hUWVqQdGqYpWSAMOPabzM1OdEsaD/HzqQkz02FneoomVyBUf4Z68YfpGx8dQ==
@@ -1703,7 +1703,7 @@
     prop-types "^15.7.2"
     regenerator-runtime "^0.12.1"
 
-"@storybook/theming@5.2.0-rc.9", "@storybook/theming@^5.2.0-rc.5":
+"@storybook/theming@5.2.0-rc.9", "@storybook/theming@^5.2.0-rc.6":
   version "5.2.0-rc.9"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-5.2.0-rc.9.tgz#200db6120ecb53f0fa46a0f985ac3a2c4524f924"
   integrity sha512-3UacqgMiAe9i4Xz5bqiymy0pm/zv1sjiyV8PwOecvW4PV1ZcP59GQsSSZINiAnyT40cul6aSWcuB8rny3gAO7Q==
