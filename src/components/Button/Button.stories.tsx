@@ -5,7 +5,7 @@ import { Button } from './Button';
 import { Icon } from '../Icon';
 
 export default {
-  title: 'Components|Button',
+  title: 'Design System|Button',
   component: Button
 };
 

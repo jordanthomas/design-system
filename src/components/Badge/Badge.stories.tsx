@@ -3,7 +3,7 @@ import React from 'react';
 import { Badge } from './Badge';
 
 export default {
-  title: 'Components|Badge',
+  title: 'Design System|Badge',
   component: Badge
 };
 

@@ -5,7 +5,7 @@ import { LoadingDots } from './LoadingDots';
 import { Button } from '../Button';
 
 export default {
-  title: 'Components|Loading Dots',
+  title: 'Design System|Loading Dots',
   component: LoadingDots
 };
 

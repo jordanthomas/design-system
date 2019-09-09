@@ -35,7 +35,7 @@ const IconGrid: React.FC = () => {
 };
 
 export default {
-  title: 'Components|Icon',
+  title: 'Design System|Icon',
   component: Icon
 };
 

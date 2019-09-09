@@ -3,7 +3,7 @@ import React from 'react';
 import { Flash } from './Flash';
 
 export default {
-  title: 'Components|Flash',
+  title: 'Design System|Flash',
   component: Flash
 };
 

@@ -4,7 +4,7 @@ import { Tooltip } from './Tooltip';
 import { Icon } from '../Icon';
 
 export default {
-  title: 'Components|Tooltip',
+  title: 'Design System|Tooltip',
   component: Tooltip
 };
 
