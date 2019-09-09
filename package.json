@@ -10,6 +10,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "storybook:watch": "start-storybook --port 52033",
+    "storybook:build-docs": "build-storybook --docs -c .storybook -o .out",
     "storybook:build": "build-storybook -c .storybook -o .out",
     "dist:build": "yarn dist:build-lib && yarn dist:gen-types",
     "dist:build-lib": "rollup --config",

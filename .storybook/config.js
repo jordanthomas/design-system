@@ -6,9 +6,6 @@ import './assets/stylesheets/storybook.scss';
 
 addParameters({
   options: {
-    showPanel: false,
-    panelPosition: 'right',
-    selectedPanel: 'docs',
     theme: ebthTheme
   }
 });
