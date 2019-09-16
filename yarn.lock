@@ -1395,10 +1395,10 @@
     react-inspector "^3.0.2"
     uuid "^3.3.2"
 
-"@storybook/addon-docs@^5.2.0-rc.11":
-  version "5.2.0-rc.11"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-docs/-/addon-docs-5.2.0-rc.11.tgz#f8ec6fe340a815c8f4d83de04b889db0e294ddce"
-  integrity sha512-iG9DKJrPBtkAXm1qTmibWh8+8Tm2JHdk8BKcWYzdaDUra2KrjkGlx2KCvaBvuLlCUckwsd80NN+zam0C5PuLBg==
+"@storybook/addon-docs@^5.2.0":
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-docs/-/addon-docs-5.2.0.tgz#bfdd2c7d3abedc6def465e937a199f94a6f88c67"
+  integrity sha512-MBo72CzSXIHwvOP+jNkRFpddevZysyNkY8FaxVXVsk7ISw8ncr+WjpX0XPVF5DBdV6vK9IwPOM/cIi/r0PVb1Q==
   dependencies:
     "@babel/generator" "^7.4.0"
     "@babel/parser" "^7.4.2"
@@ -1406,12 +1406,12 @@
     "@mdx-js/loader" "^1.1.0"
     "@mdx-js/mdx" "^1.1.0"
     "@mdx-js/react" "^1.0.27"
-    "@storybook/addons" "5.2.0-rc.11"
-    "@storybook/api" "5.2.0-rc.11"
-    "@storybook/components" "5.2.0-rc.11"
-    "@storybook/router" "5.2.0-rc.11"
-    "@storybook/source-loader" "5.2.0-rc.11"
-    "@storybook/theming" "5.2.0-rc.11"
+    "@storybook/addons" "5.2.0"
+    "@storybook/api" "5.2.0"
+    "@storybook/components" "5.2.0"
+    "@storybook/router" "5.2.0"
+    "@storybook/source-loader" "5.2.0"
+    "@storybook/theming" "5.2.0"
     core-js "^3.0.1"
     global "^4.3.2"
     js-string-escape "^1.0.1"
@@ -1829,7 +1829,22 @@
     memoizerific "^1.11.3"
     qs "^6.6.0"
 
-"@storybook/source-loader@5.2.0-rc.11", "@storybook/source-loader@^5.2.0-rc.6":
+"@storybook/source-loader@5.2.0", "@storybook/source-loader@^5.2.0-rc.6":
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@storybook/source-loader/-/source-loader-5.2.0.tgz#3ea4daf3154464fd509a3a1bd23dc391b194c2e3"
+  integrity sha512-bX9ihc/JgJW6xsSwz780+xcQGZD4WuevMm4TgjBmEjN7HUAbfgALi53qR3kj4gKgaF/siU9DSIYsKuBj0HAn2Q==
+  dependencies:
+    "@storybook/addons" "5.2.0"
+    "@storybook/router" "5.2.0"
+    core-js "^3.0.1"
+    estraverse "^4.2.0"
+    global "^4.3.2"
+    loader-utils "^1.2.3"
+    prettier "^1.16.4"
+    prop-types "^15.7.2"
+    regenerator-runtime "^0.12.1"
+
+"@storybook/source-loader@5.2.0-rc.11":
   version "5.2.0-rc.11"
   resolved "https://registry.yarnpkg.com/@storybook/source-loader/-/source-loader-5.2.0-rc.11.tgz#d12601f861edb0c5bb520e2e72095fa7bb486d1e"
   integrity sha512-3I620YZFmEPYfaD0C6KuZTjgpp9ERf6P3zP1UeTeL1nPoeWmXuew/eRCzRYXCkqHtLD4cCQ15MRCt24U4gnzbA==
@@ -1844,7 +1859,7 @@
     prop-types "^15.7.2"
     regenerator-runtime "^0.12.1"
 
-"@storybook/theming@5.2.0":
+"@storybook/theming@5.2.0", "@storybook/theming@^5.2.0-rc.11":
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-5.2.0.tgz#39122c86eaa17d5bac0f1f814dbb430e74b836aa"
   integrity sha512-DPqexBMlrlCr4/kYEYRUzYx3T1Tm5wBPamO2upU8txO4dY33Co1Niiv0P7e2gv4iSH3sdUVLtFrlHxzjzkkSPg==
@@ -1862,7 +1877,7 @@
     prop-types "^15.7.2"
     resolve-from "^5.0.0"
 
-"@storybook/theming@5.2.0-rc.11", "@storybook/theming@^5.2.0-rc.11":
+"@storybook/theming@5.2.0-rc.11":
   version "5.2.0-rc.11"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-5.2.0-rc.11.tgz#49feda0602818a2aaf8ee258d586e83c03858f57"
   integrity sha512-TJN5FBbRbM9kcrria9ZLz1CdhW8sLeYIsX+DtU1KCQEn71F6+pzIAQTHsD0OjeA2xnYxH/UK2Ca1W1iTfoR5AA==
