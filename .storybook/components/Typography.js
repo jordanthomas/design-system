@@ -5,9 +5,9 @@ type Props = {}
 class Typography extends React.Component<Props> {
   render() {
     return (
-      <div className="type-grid">
+      <div className="type-grid u-mt4">
         <div>
-          <h2 className="u-mb4">Standard Scale</h2>
+          <h4 className="u-mb4">Standard Scale</h4>
           <hr />
 
           <h1 className="u-mb2">H1: Bebas</h1>
@@ -40,7 +40,7 @@ class Typography extends React.Component<Props> {
           </div>
         </div>
         <div>
-          <h2 className="u-mb4">Functional Scale (item detail pages)</h2>
+          <h4 className="u-mb4">Functional Scale</h4>
           <hr />
 
           <h1 className="u-mb2">H1: Aktiv</h1>
