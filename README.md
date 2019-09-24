@@ -69,3 +69,7 @@ UI Component library and style helper mixins for SCSS.
 ## Contributing
 
 Please see documentation for [contributing here](./CONTRIBUTING.md).
+
+## License
+
+MIT License.
