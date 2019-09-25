@@ -1,13 +1,14 @@
 {
   "name": "@ebth/design-system",
   "version": "0.1.0",
-  "description": "UI Component Library for EBTH",
+  "description": "EBTH Design System",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "repository": "git://github.com/ebth/design-system.git",
-  "author": "Brandon Patram <brandon.patram@ebth.com>",
-  "license": "UNLICENSED",
+  "repository": "https://github.com/ebth/design-system",
+  "author": "EBTH <contact@ebth.com>",
+  "homepage": "https://ebth.design",
+  "license": "MIT",
   "scripts": {
     "storybook:watch": "start-storybook --port 52033",
     "storybook:build-docs": "build-storybook --docs -c .storybook -o .out",
@@ -33,9 +34,6 @@
     "loki:build-current-static": "loki update --reactUri file:.out --reference .loki/current",
     "test:visual": "reg-cli .loki/current .loki/reference .loki/difference -R .loki/visual.html -J .loki/visual.json -E -A",
     "loki:approve": "loki approve"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
