@@ -10,10 +10,8 @@ UI Component library and style helper mixins for SCSS.
 
 1. Install library
 
-    **This package is not published on NPM or privately (yet), so install as a GitHub repo for now**
-
     ```bash
-    yarn add git@github.com:ebth/design-system.git/master
+    yarn add @ebth/design-system
     ```
 
 1. Import components
