@@ -58,7 +58,7 @@
     "concurrently": "^4.1.2",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
-    "flow-bin": "^0.108.0",
+    "flow-bin": "^0.109.0",
     "flowgen": "^1.10.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
