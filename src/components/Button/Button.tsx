@@ -6,7 +6,7 @@ import './Button.scss';
 
 import { LoadingDots } from '../LoadingDots';
 
-type Props = {
+interface Props {
   buttonDisplay?: 'block' | 'icon-only' | 'icon-only-circle' | 'link';
   buttonSize?: 'extra-sm' | 'sm' | 'lg' | 'xl';
   buttonStyle?:
@@ -22,7 +22,7 @@ type Props = {
     | 'text-navigation'
     | 'link';
   inFlight?: boolean;
-};
+}
 
 type FullProps = Props &
   Pick<

@@ -4,12 +4,12 @@ import { icons } from './icons';
 
 import './Icon.scss';
 
-type Props = {
+interface Props {
   accessibilityLabel?: string;
   icon: string;
   size?: string | number;
   svgRef?: any;
-};
+}
 
 type FullProps = Props &
   Pick<
