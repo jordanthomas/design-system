@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import './LoadingDots.scss';
 
-interface Props {};
+interface Props {}
 
 type FullProps = Props &
   Pick<
