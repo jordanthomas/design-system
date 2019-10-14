@@ -5,11 +5,11 @@ import './Flash.scss';
 
 import { Icon } from '../Icon';
 
-type Props = {
+interface Props {
   flashStyle?: 'warn' | 'error' | 'success';
   heading?: string;
   showIcon?: boolean;
-};
+}
 
 type FullProps = Props &
   Pick<

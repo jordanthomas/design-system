@@ -6,11 +6,11 @@ import { Tooltip } from '../Tooltip';
 
 import './Badge.scss';
 
-type Props = {
+interface Props {
   badgeSize?: 'mini';
   status?: 'neutral' | 'positive' | 'warning' | 'negative';
   infoTooltip?: React.ReactChild;
-};
+}
 
 type FullProps = Props &
   Pick<
