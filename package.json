@@ -16,7 +16,7 @@
     "dist:build": "yarn dist:build-lib && yarn dist:gen-types",
     "dist:build-lib": "rollup --config",
     "dist:gen-ts-types": "tsc -p ./tsconfig-types.json --emitDeclarationOnly --outFile dist/index.d.ts",
-    "dist:gen-flow-types": "flowgen dist/index.d.ts --add-flow-header --interface-records --output-file dist/index.flow.js",
+    "dist:gen-flow-types": "flowgen dist/index.d.ts --add-flow-header --output-file dist/index.flow.js",
     "dist:gen-types": "yarn dist:gen-ts-types && yarn dist:gen-flow-types",
     "dist:watch": "rollup --config -w",
     "test": "jest",
